@@ -1,0 +1,32 @@
+$blueWhite: #f4f7f9;
+$blueLight: #dce1e5;
+$blueLighter: #143249;
+$blueDark: #0d2231;
+
+$white: #fff;
+$orange: #f8a326;
+$blue: #00acec;
+$purple: #9564e2;
+$green: #49bf67;
+$red: #f34541;
+
+$contrast: $red;
+$content: $blueWhite;
+
+$topNavbarBackground: $contrast;
+
+// navigation
+
+// if height of browser window > $navbarFixedHeight - than navigation will be fixed
+$navbarFixedHeight: 700px;
+$navBackground: $blueDark;
+$navItemBorderTop: 1px solid darken($navBackground, 2%);
+$navItemBorderBottom: 1px solid lighten($navBackground, 2%);
+$navItemOpenDropdown: darken($navBackground, 3%);
+$navItemOpenDropdownBackground: darken($navBackground, 1%);
+$navItemHoverFocusBackground: darken($navBackground, 3%);
+$navIcon: lighten($blueLighter, 15%);
+$navText: lighten($blueLighter, 13%);
+$navIconHoverFocus: $contrast;
+$navTextHoverFocus: lighten($blueLighter, 23%);
+$navHeader: $contrast;

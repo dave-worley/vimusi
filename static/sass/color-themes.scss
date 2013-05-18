@@ -1,0 +1,529 @@
+@import "_variables";
+@import "_bootstrap-variables";
+@import "_bootstrap-mixins";
+
+.blue-theme {
+  header {
+    .navbar {
+      .navbar-inner {
+        background: $blue;
+
+        .first {
+          background: darken($blue, 5%);
+
+          .label {
+            color: darken($blue, 5%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($blue, 10%);
+            }
+          }
+        }
+
+        .second {
+          background: darken($blue, 10%);
+
+          .label {
+            color: darken($blue, 10%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($blue, 15%);
+            }
+          }
+        }
+
+        .third {
+          background: darken($blue, 15%);
+
+          .label {
+            color: darken($blue, 15%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($blue, 20%);
+            }
+          }
+        }
+
+        .widget {
+          .dropdown-menu {
+            > li {
+              &.widget-footer {
+                a {
+                  &:hover {
+                    background: $blue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .navigation {
+      .nav {
+        li {
+          &.nav-header {
+            color: $blue;
+          }
+
+          &:hover, &.active {
+            > .dropdown-collapse.collapsed, > a, > a:focus {
+              i {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .box {
+    .box-header {
+      .actions {
+        .btn {
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    [class^="icon-"] {
+      color: $blue;
+    }
+  }
+
+  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+    background: $blue;
+  }
+
+  .fc-event {
+
+    .fc-event-inner {
+      background: $blue;
+    }
+  }
+
+  .daterangepicker {
+    .ranges li.active, .ranges li:hover {
+      background: $blue;
+      border-color: transparent;
+    }
+
+    td.active, td.active:hover {
+      background: $blue;
+    }
+  }
+
+  .datepicker td span.active:hover, .datepicker td span.active:hover:hover, .datepicker td span.active.disabled:hover, .datepicker td span.active.disabled:hover:hover, .datepicker td span.active:active, .datepicker td span.active:hover:active, .datepicker td span.active.disabled:active, .datepicker td span.active.disabled:hover:active, .datepicker td span.active.active, .datepicker td span.active:hover.active, .datepicker td span.active.disabled.active, .datepicker td span.active.disabled:hover.active, .datepicker td span.active.disabled, .datepicker td span.active:hover.disabled, .datepicker td span.active.disabled.disabled, .datepicker td span.active.disabled:hover.disabled, .datepicker td span.active[disabled], .datepicker td span.active:hover[disabled], .datepicker td span.active.disabled[disabled], .datepicker td span.active.disabled:hover[disabled], .datepicker td.active:hover, .datepicker td.active:hover:hover, .datepicker td.active.disabled:hover, .datepicker td.active.disabled:hover:hover, .datepicker td.active:active, .datepicker td.active:hover:active, .datepicker td.active.disabled:active, .datepicker td.active.disabled:hover:active, .datepicker td.active.active, .datepicker td.active:hover.active, .datepicker td.active.disabled.active, .datepicker td.active.disabled:hover.active, .datepicker td.active.disabled, .datepicker td.active:hover.disabled, .datepicker td.active.disabled.disabled, .datepicker td.active.disabled:hover.disabled, .datepicker td.active[disabled], .datepicker td.active:hover[disabled], .datepicker td.active.disabled[disabled], .datepicker td.active.disabled:hover[disabled] {
+    background: $blue;
+  }
+}
+
+// orange
+
+.orange-theme {
+  header {
+    .navbar {
+      .navbar-inner {
+        background: $orange;
+
+        .first {
+          background: darken($orange, 5%);
+
+          .label {
+            color: darken($orange, 5%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($orange, 10%);
+            }
+          }
+        }
+
+        .second {
+          background: darken($orange, 10%);
+
+          .label {
+            color: darken($orange, 10%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($orange, 15%);
+            }
+          }
+        }
+
+        .third {
+          background: darken($orange, 15%);
+
+          .label {
+            color: darken($orange, 15%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($orange, 20%);
+            }
+          }
+        }
+
+        .widget {
+          .dropdown-menu {
+            > li {
+              &.widget-footer {
+                a {
+                  &:hover {
+                    background: $orange;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .navigation {
+      .nav {
+        li {
+          &.nav-header {
+            color: $orange;
+          }
+
+          &:hover, &.active {
+            > .dropdown-collapse.collapsed, > a, > a:focus {
+              i {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .box {
+    .box-header {
+      .actions {
+        .btn {
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    [class^="icon-"] {
+      color: $orange;
+    }
+  }
+
+  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+    background: $orange;
+  }
+
+  .fc-event {
+
+    .fc-event-inner {
+      background: $orange;
+    }
+  }
+
+  .daterangepicker {
+    .ranges li.active, .ranges li:hover {
+      background: $orange;
+      border-color: transparent;
+    }
+
+    td.active, td.active:hover {
+      background: $orange;
+    }
+  }
+
+  .datepicker td span.active:hover, .datepicker td span.active:hover:hover, .datepicker td span.active.disabled:hover, .datepicker td span.active.disabled:hover:hover, .datepicker td span.active:active, .datepicker td span.active:hover:active, .datepicker td span.active.disabled:active, .datepicker td span.active.disabled:hover:active, .datepicker td span.active.active, .datepicker td span.active:hover.active, .datepicker td span.active.disabled.active, .datepicker td span.active.disabled:hover.active, .datepicker td span.active.disabled, .datepicker td span.active:hover.disabled, .datepicker td span.active.disabled.disabled, .datepicker td span.active.disabled:hover.disabled, .datepicker td span.active[disabled], .datepicker td span.active:hover[disabled], .datepicker td span.active.disabled[disabled], .datepicker td span.active.disabled:hover[disabled], .datepicker td.active:hover, .datepicker td.active:hover:hover, .datepicker td.active.disabled:hover, .datepicker td.active.disabled:hover:hover, .datepicker td.active:active, .datepicker td.active:hover:active, .datepicker td.active.disabled:active, .datepicker td.active.disabled:hover:active, .datepicker td.active.active, .datepicker td.active:hover.active, .datepicker td.active.disabled.active, .datepicker td.active.disabled:hover.active, .datepicker td.active.disabled, .datepicker td.active:hover.disabled, .datepicker td.active.disabled.disabled, .datepicker td.active.disabled:hover.disabled, .datepicker td.active[disabled], .datepicker td.active:hover[disabled], .datepicker td.active.disabled[disabled], .datepicker td.active.disabled:hover[disabled] {
+    background: $orange;
+  }
+}
+
+// purple
+
+.purple-theme {
+  header {
+    .navbar {
+      .navbar-inner {
+        background: $purple;
+
+        .first {
+          background: darken($purple, 5%);
+
+          .label {
+            color: darken($purple, 5%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($purple, 10%);
+            }
+          }
+        }
+
+        .second {
+          background: darken($purple, 10%);
+
+          .label {
+            color: darken($purple, 10%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($purple, 15%);
+            }
+          }
+        }
+
+        .third {
+          background: darken($purple, 15%);
+
+          .label {
+            color: darken($purple, 15%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($purple, 20%);
+            }
+          }
+        }
+
+        .widget {
+          .dropdown-menu {
+            > li {
+              &.widget-footer {
+                a {
+                  &:hover {
+                    background: $purple;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .navigation {
+      .nav {
+        li {
+          &.nav-header {
+            color: $purple;
+          }
+
+          &:hover, &.active {
+            > .dropdown-collapse.collapsed, > a, > a:focus {
+              i {
+                color: $purple;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .box {
+    .box-header {
+      .actions {
+        .btn {
+          &:hover {
+            color: $purple;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    [class^="icon-"] {
+      color: $purple;
+    }
+  }
+
+  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+    background: $purple;
+  }
+
+  .fc-event {
+
+    .fc-event-inner {
+      background: $purple;
+    }
+  }
+
+  .daterangepicker {
+    .ranges li.active, .ranges li:hover {
+      background: $purple;
+      border-color: transparent;
+    }
+
+    td.active, td.active:hover {
+      background: $purple;
+    }
+  }
+
+  .datepicker td span.active:hover, .datepicker td span.active:hover:hover, .datepicker td span.active.disabled:hover, .datepicker td span.active.disabled:hover:hover, .datepicker td span.active:active, .datepicker td span.active:hover:active, .datepicker td span.active.disabled:active, .datepicker td span.active.disabled:hover:active, .datepicker td span.active.active, .datepicker td span.active:hover.active, .datepicker td span.active.disabled.active, .datepicker td span.active.disabled:hover.active, .datepicker td span.active.disabled, .datepicker td span.active:hover.disabled, .datepicker td span.active.disabled.disabled, .datepicker td span.active.disabled:hover.disabled, .datepicker td span.active[disabled], .datepicker td span.active:hover[disabled], .datepicker td span.active.disabled[disabled], .datepicker td span.active.disabled:hover[disabled], .datepicker td.active:hover, .datepicker td.active:hover:hover, .datepicker td.active.disabled:hover, .datepicker td.active.disabled:hover:hover, .datepicker td.active:active, .datepicker td.active:hover:active, .datepicker td.active.disabled:active, .datepicker td.active.disabled:hover:active, .datepicker td.active.active, .datepicker td.active:hover.active, .datepicker td.active.disabled.active, .datepicker td.active.disabled:hover.active, .datepicker td.active.disabled, .datepicker td.active:hover.disabled, .datepicker td.active.disabled.disabled, .datepicker td.active.disabled:hover.disabled, .datepicker td.active[disabled], .datepicker td.active:hover[disabled], .datepicker td.active.disabled[disabled], .datepicker td.active.disabled:hover[disabled] {
+    background: $purple;
+  }
+}
+
+// green
+
+.green-theme {
+  header {
+    .navbar {
+      .navbar-inner {
+        background: $green;
+
+        .first {
+          background: darken($green, 5%);
+
+          .label {
+            color: darken($green, 5%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($green, 10%);
+            }
+          }
+        }
+
+        .second {
+          background: darken($green, 10%);
+
+          .label {
+            color: darken($green, 10%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($green, 15%);
+            }
+          }
+        }
+
+        .third {
+          background: darken($green, 15%);
+
+          .label {
+            color: darken($green, 15%);
+          }
+
+          &:hover, &:active, &:focus {
+            > a {
+              background-color: darken($green, 20%);
+            }
+          }
+        }
+
+        .widget {
+          .dropdown-menu {
+            > li {
+              &.widget-footer {
+                a {
+                  &:hover {
+                    background: $green;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .navigation {
+      .nav {
+        li {
+          &.nav-header {
+            color: $green;
+          }
+
+          &:hover, &.active {
+            > .dropdown-collapse.collapsed, > a, > a:focus {
+              i {
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .box {
+    .box-header {
+      .actions {
+        .btn {
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    [class^="icon-"] {
+      color: $green;
+    }
+  }
+
+  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+    background: $green;
+  }
+
+  .fc-event {
+
+    .fc-event-inner {
+      background: $green;
+    }
+  }
+
+  .daterangepicker {
+    .ranges li.active, .ranges li:hover {
+      background: $green;
+      border-color: transparent;
+    }
+
+    td.active, td.active:hover {
+      background: $green;
+    }
+  }
+
+  .datepicker td span.active:hover, .datepicker td span.active:hover:hover, .datepicker td span.active.disabled:hover, .datepicker td span.active.disabled:hover:hover, .datepicker td span.active:active, .datepicker td span.active:hover:active, .datepicker td span.active.disabled:active, .datepicker td span.active.disabled:hover:active, .datepicker td span.active.active, .datepicker td span.active:hover.active, .datepicker td span.active.disabled.active, .datepicker td span.active.disabled:hover.active, .datepicker td span.active.disabled, .datepicker td span.active:hover.disabled, .datepicker td span.active.disabled.disabled, .datepicker td span.active.disabled:hover.disabled, .datepicker td span.active[disabled], .datepicker td span.active:hover[disabled], .datepicker td span.active.disabled[disabled], .datepicker td span.active.disabled:hover[disabled], .datepicker td.active:hover, .datepicker td.active:hover:hover, .datepicker td.active.disabled:hover, .datepicker td.active.disabled:hover:hover, .datepicker td.active:active, .datepicker td.active:hover:active, .datepicker td.active.disabled:active, .datepicker td.active.disabled:hover:active, .datepicker td.active.active, .datepicker td.active:hover.active, .datepicker td.active.disabled.active, .datepicker td.active.disabled:hover.active, .datepicker td.active.disabled, .datepicker td.active:hover.disabled, .datepicker td.active.disabled.disabled, .datepicker td.active.disabled:hover.disabled, .datepicker td.active[disabled], .datepicker td.active:hover[disabled], .datepicker td.active.disabled[disabled], .datepicker td.active.disabled:hover[disabled] {
+    background: $green;
+  }
+}

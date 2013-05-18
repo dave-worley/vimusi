@@ -1,0 +1,16 @@
+.tasks .progress:last-child {
+  margin-bottom: 0; }
+
+#stats-chart1, #stats-chart2 {
+  height: 200px; }
+
+#validation {
+  margin-bottom: 0; }
+
+.wysihtml5-sandbox {
+  box-sizing: border-box; }
+
+#tables .responsive-table, #tables .table {
+  margin-bottom: 0; }
+#tables .data-table {
+  margin-bottom: 20px; }

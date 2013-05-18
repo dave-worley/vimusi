@@ -1,0 +1,28 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require color-themes
+ *= require theme
+ *= require demo
+ *= require font-awesome
+ *= require fullcalendar
+ *= require fullcalendar.print
+ *= require bootstrap-daterangepicker
+ *= require bootstrap-wysihtml5
+ *= require jquery-ui-1.10.0.custom
+ *= require jquery.ui.1.10.0.ie
+ *= require select2
+ *= require bootstrap-colorpicker
+ *= require mention
+ *= require bootstrap-switch
+ *= require bootstrap-datetimepicker
+ *= require messenger
+ *= require messenger-theme-block
+ *= require jquery.fileupload-ui
+ *= require bootstrap-datatable
+ *= require bootstrap-editable
+*/

@@ -1,0 +1,167 @@
+.blue-theme header .navbar .navbar-inner {
+  background: #00acec; }
+  .blue-theme header .navbar .navbar-inner .first {
+    background: #0099d3; }
+    .blue-theme header .navbar .navbar-inner .first .label {
+      color: #0099d3; }
+    .blue-theme header .navbar .navbar-inner .first:hover > a, .blue-theme header .navbar .navbar-inner .first:active > a, .blue-theme header .navbar .navbar-inner .first:focus > a {
+      background-color: #0087b9; }
+  .blue-theme header .navbar .navbar-inner .second {
+    background: #0087b9; }
+    .blue-theme header .navbar .navbar-inner .second .label {
+      color: #0087b9; }
+    .blue-theme header .navbar .navbar-inner .second:hover > a, .blue-theme header .navbar .navbar-inner .second:active > a, .blue-theme header .navbar .navbar-inner .second:focus > a {
+      background-color: #0074a0; }
+  .blue-theme header .navbar .navbar-inner .third {
+    background: #0074a0; }
+    .blue-theme header .navbar .navbar-inner .third .label {
+      color: #0074a0; }
+    .blue-theme header .navbar .navbar-inner .third:hover > a, .blue-theme header .navbar .navbar-inner .third:active > a, .blue-theme header .navbar .navbar-inner .third:focus > a {
+      background-color: #006286; }
+  .blue-theme header .navbar .navbar-inner .widget .dropdown-menu > li.widget-footer a:hover {
+    background: #00acec; }
+.blue-theme nav .navigation .nav li.nav-header {
+  color: #00acec; }
+.blue-theme nav .navigation .nav li:hover > .dropdown-collapse.collapsed i, .blue-theme nav .navigation .nav li:hover > a i, .blue-theme nav .navigation .nav li:hover > a:focus i, .blue-theme nav .navigation .nav li.active > .dropdown-collapse.collapsed i, .blue-theme nav .navigation .nav li.active > a i, .blue-theme nav .navigation .nav li.active > a:focus i {
+  color: #00acec; }
+.blue-theme .box .box-header .actions .btn:hover {
+  color: #00acec; }
+.blue-theme h1 [class^="icon-"] {
+  color: #00acec; }
+.blue-theme .dropdown-menu > .active > a, .blue-theme .dropdown-menu > .active > a:hover, .blue-theme .dropdown-menu > .active > a:focus, .blue-theme .dropdown-menu > li > a:hover, .blue-theme .dropdown-menu > li > a:focus, .blue-theme .dropdown-submenu:hover > a, .blue-theme .dropdown-submenu:focus > a {
+  background: #00acec; }
+.blue-theme .fc-event .fc-event-inner {
+  background: #00acec; }
+.blue-theme .daterangepicker .ranges li.active, .blue-theme .daterangepicker .ranges li:hover {
+  background: #00acec;
+  border-color: transparent; }
+.blue-theme .daterangepicker td.active, .blue-theme .daterangepicker td.active:hover {
+  background: #00acec; }
+.blue-theme .datepicker td span.active:hover, .blue-theme .datepicker td span.active:hover:hover, .blue-theme .datepicker td span.active.disabled:hover, .blue-theme .datepicker td span.active.disabled:hover:hover, .blue-theme .datepicker td span.active:active, .blue-theme .datepicker td span.active:hover:active, .blue-theme .datepicker td span.active.disabled:active, .blue-theme .datepicker td span.active.disabled:hover:active, .blue-theme .datepicker td span.active.active, .blue-theme .datepicker td span.active:hover.active, .blue-theme .datepicker td span.active.disabled.active, .blue-theme .datepicker td span.active.disabled:hover.active, .blue-theme .datepicker td span.active.disabled, .blue-theme .datepicker td span.active:hover.disabled, .blue-theme .datepicker td span.active.disabled.disabled, .blue-theme .datepicker td span.active.disabled:hover.disabled, .blue-theme .datepicker td span.active[disabled], .blue-theme .datepicker td span.active:hover[disabled], .blue-theme .datepicker td span.active.disabled[disabled], .blue-theme .datepicker td span.active.disabled:hover[disabled], .blue-theme .datepicker td.active:hover, .blue-theme .datepicker td.active:hover:hover, .blue-theme .datepicker td.active.disabled:hover, .blue-theme .datepicker td.active.disabled:hover:hover, .blue-theme .datepicker td.active:active, .blue-theme .datepicker td.active:hover:active, .blue-theme .datepicker td.active.disabled:active, .blue-theme .datepicker td.active.disabled:hover:active, .blue-theme .datepicker td.active.active, .blue-theme .datepicker td.active:hover.active, .blue-theme .datepicker td.active.disabled.active, .blue-theme .datepicker td.active.disabled:hover.active, .blue-theme .datepicker td.active.disabled, .blue-theme .datepicker td.active:hover.disabled, .blue-theme .datepicker td.active.disabled.disabled, .blue-theme .datepicker td.active.disabled:hover.disabled, .blue-theme .datepicker td.active[disabled], .blue-theme .datepicker td.active:hover[disabled], .blue-theme .datepicker td.active.disabled[disabled], .blue-theme .datepicker td.active.disabled:hover[disabled] {
+  background: #00acec; }
+
+.orange-theme header .navbar .navbar-inner {
+  background: #f8a326; }
+  .orange-theme header .navbar .navbar-inner .first {
+    background: #f7990d; }
+    .orange-theme header .navbar .navbar-inner .first .label {
+      color: #f7990d; }
+    .orange-theme header .navbar .navbar-inner .first:hover > a, .orange-theme header .navbar .navbar-inner .first:active > a, .orange-theme header .navbar .navbar-inner .first:focus > a {
+      background-color: #e48a07; }
+  .orange-theme header .navbar .navbar-inner .second {
+    background: #e48a07; }
+    .orange-theme header .navbar .navbar-inner .second .label {
+      color: #e48a07; }
+    .orange-theme header .navbar .navbar-inner .second:hover > a, .orange-theme header .navbar .navbar-inner .second:active > a, .orange-theme header .navbar .navbar-inner .second:focus > a {
+      background-color: #cb7b07; }
+  .orange-theme header .navbar .navbar-inner .third {
+    background: #cb7b07; }
+    .orange-theme header .navbar .navbar-inner .third .label {
+      color: #cb7b07; }
+    .orange-theme header .navbar .navbar-inner .third:hover > a, .orange-theme header .navbar .navbar-inner .third:active > a, .orange-theme header .navbar .navbar-inner .third:focus > a {
+      background-color: #b26c06; }
+  .orange-theme header .navbar .navbar-inner .widget .dropdown-menu > li.widget-footer a:hover {
+    background: #f8a326; }
+.orange-theme nav .navigation .nav li.nav-header {
+  color: #f8a326; }
+.orange-theme nav .navigation .nav li:hover > .dropdown-collapse.collapsed i, .orange-theme nav .navigation .nav li:hover > a i, .orange-theme nav .navigation .nav li:hover > a:focus i, .orange-theme nav .navigation .nav li.active > .dropdown-collapse.collapsed i, .orange-theme nav .navigation .nav li.active > a i, .orange-theme nav .navigation .nav li.active > a:focus i {
+  color: #f8a326; }
+.orange-theme .box .box-header .actions .btn:hover {
+  color: #f8a326; }
+.orange-theme h1 [class^="icon-"] {
+  color: #f8a326; }
+.orange-theme .dropdown-menu > .active > a, .orange-theme .dropdown-menu > .active > a:hover, .orange-theme .dropdown-menu > .active > a:focus, .orange-theme .dropdown-menu > li > a:hover, .orange-theme .dropdown-menu > li > a:focus, .orange-theme .dropdown-submenu:hover > a, .orange-theme .dropdown-submenu:focus > a {
+  background: #f8a326; }
+.orange-theme .fc-event .fc-event-inner {
+  background: #f8a326; }
+.orange-theme .daterangepicker .ranges li.active, .orange-theme .daterangepicker .ranges li:hover {
+  background: #f8a326;
+  border-color: transparent; }
+.orange-theme .daterangepicker td.active, .orange-theme .daterangepicker td.active:hover {
+  background: #f8a326; }
+.orange-theme .datepicker td span.active:hover, .orange-theme .datepicker td span.active:hover:hover, .orange-theme .datepicker td span.active.disabled:hover, .orange-theme .datepicker td span.active.disabled:hover:hover, .orange-theme .datepicker td span.active:active, .orange-theme .datepicker td span.active:hover:active, .orange-theme .datepicker td span.active.disabled:active, .orange-theme .datepicker td span.active.disabled:hover:active, .orange-theme .datepicker td span.active.active, .orange-theme .datepicker td span.active:hover.active, .orange-theme .datepicker td span.active.disabled.active, .orange-theme .datepicker td span.active.disabled:hover.active, .orange-theme .datepicker td span.active.disabled, .orange-theme .datepicker td span.active:hover.disabled, .orange-theme .datepicker td span.active.disabled.disabled, .orange-theme .datepicker td span.active.disabled:hover.disabled, .orange-theme .datepicker td span.active[disabled], .orange-theme .datepicker td span.active:hover[disabled], .orange-theme .datepicker td span.active.disabled[disabled], .orange-theme .datepicker td span.active.disabled:hover[disabled], .orange-theme .datepicker td.active:hover, .orange-theme .datepicker td.active:hover:hover, .orange-theme .datepicker td.active.disabled:hover, .orange-theme .datepicker td.active.disabled:hover:hover, .orange-theme .datepicker td.active:active, .orange-theme .datepicker td.active:hover:active, .orange-theme .datepicker td.active.disabled:active, .orange-theme .datepicker td.active.disabled:hover:active, .orange-theme .datepicker td.active.active, .orange-theme .datepicker td.active:hover.active, .orange-theme .datepicker td.active.disabled.active, .orange-theme .datepicker td.active.disabled:hover.active, .orange-theme .datepicker td.active.disabled, .orange-theme .datepicker td.active:hover.disabled, .orange-theme .datepicker td.active.disabled.disabled, .orange-theme .datepicker td.active.disabled:hover.disabled, .orange-theme .datepicker td.active[disabled], .orange-theme .datepicker td.active:hover[disabled], .orange-theme .datepicker td.active.disabled[disabled], .orange-theme .datepicker td.active.disabled:hover[disabled] {
+  background: #f8a326; }
+
+.purple-theme header .navbar .navbar-inner {
+  background: #9564e2; }
+  .purple-theme header .navbar .navbar-inner .first {
+    background: #864fde; }
+    .purple-theme header .navbar .navbar-inner .first .label {
+      color: #864fde; }
+    .purple-theme header .navbar .navbar-inner .first:hover > a, .purple-theme header .navbar .navbar-inner .first:active > a, .purple-theme header .navbar .navbar-inner .first:focus > a {
+      background-color: #7839da; }
+  .purple-theme header .navbar .navbar-inner .second {
+    background: #7839da; }
+    .purple-theme header .navbar .navbar-inner .second .label {
+      color: #7839da; }
+    .purple-theme header .navbar .navbar-inner .second:hover > a, .purple-theme header .navbar .navbar-inner .second:active > a, .purple-theme header .navbar .navbar-inner .second:focus > a {
+      background-color: #6a27d2; }
+  .purple-theme header .navbar .navbar-inner .third {
+    background: #6a27d2; }
+    .purple-theme header .navbar .navbar-inner .third .label {
+      color: #6a27d2; }
+    .purple-theme header .navbar .navbar-inner .third:hover > a, .purple-theme header .navbar .navbar-inner .third:active > a, .purple-theme header .navbar .navbar-inner .third:focus > a {
+      background-color: #5f23bd; }
+  .purple-theme header .navbar .navbar-inner .widget .dropdown-menu > li.widget-footer a:hover {
+    background: #9564e2; }
+.purple-theme nav .navigation .nav li.nav-header {
+  color: #9564e2; }
+.purple-theme nav .navigation .nav li:hover > .dropdown-collapse.collapsed i, .purple-theme nav .navigation .nav li:hover > a i, .purple-theme nav .navigation .nav li:hover > a:focus i, .purple-theme nav .navigation .nav li.active > .dropdown-collapse.collapsed i, .purple-theme nav .navigation .nav li.active > a i, .purple-theme nav .navigation .nav li.active > a:focus i {
+  color: #9564e2; }
+.purple-theme .box .box-header .actions .btn:hover {
+  color: #9564e2; }
+.purple-theme h1 [class^="icon-"] {
+  color: #9564e2; }
+.purple-theme .dropdown-menu > .active > a, .purple-theme .dropdown-menu > .active > a:hover, .purple-theme .dropdown-menu > .active > a:focus, .purple-theme .dropdown-menu > li > a:hover, .purple-theme .dropdown-menu > li > a:focus, .purple-theme .dropdown-submenu:hover > a, .purple-theme .dropdown-submenu:focus > a {
+  background: #9564e2; }
+.purple-theme .fc-event .fc-event-inner {
+  background: #9564e2; }
+.purple-theme .daterangepicker .ranges li.active, .purple-theme .daterangepicker .ranges li:hover {
+  background: #9564e2;
+  border-color: transparent; }
+.purple-theme .daterangepicker td.active, .purple-theme .daterangepicker td.active:hover {
+  background: #9564e2; }
+.purple-theme .datepicker td span.active:hover, .purple-theme .datepicker td span.active:hover:hover, .purple-theme .datepicker td span.active.disabled:hover, .purple-theme .datepicker td span.active.disabled:hover:hover, .purple-theme .datepicker td span.active:active, .purple-theme .datepicker td span.active:hover:active, .purple-theme .datepicker td span.active.disabled:active, .purple-theme .datepicker td span.active.disabled:hover:active, .purple-theme .datepicker td span.active.active, .purple-theme .datepicker td span.active:hover.active, .purple-theme .datepicker td span.active.disabled.active, .purple-theme .datepicker td span.active.disabled:hover.active, .purple-theme .datepicker td span.active.disabled, .purple-theme .datepicker td span.active:hover.disabled, .purple-theme .datepicker td span.active.disabled.disabled, .purple-theme .datepicker td span.active.disabled:hover.disabled, .purple-theme .datepicker td span.active[disabled], .purple-theme .datepicker td span.active:hover[disabled], .purple-theme .datepicker td span.active.disabled[disabled], .purple-theme .datepicker td span.active.disabled:hover[disabled], .purple-theme .datepicker td.active:hover, .purple-theme .datepicker td.active:hover:hover, .purple-theme .datepicker td.active.disabled:hover, .purple-theme .datepicker td.active.disabled:hover:hover, .purple-theme .datepicker td.active:active, .purple-theme .datepicker td.active:hover:active, .purple-theme .datepicker td.active.disabled:active, .purple-theme .datepicker td.active.disabled:hover:active, .purple-theme .datepicker td.active.active, .purple-theme .datepicker td.active:hover.active, .purple-theme .datepicker td.active.disabled.active, .purple-theme .datepicker td.active.disabled:hover.active, .purple-theme .datepicker td.active.disabled, .purple-theme .datepicker td.active:hover.disabled, .purple-theme .datepicker td.active.disabled.disabled, .purple-theme .datepicker td.active.disabled:hover.disabled, .purple-theme .datepicker td.active[disabled], .purple-theme .datepicker td.active:hover[disabled], .purple-theme .datepicker td.active.disabled[disabled], .purple-theme .datepicker td.active.disabled:hover[disabled] {
+  background: #9564e2; }
+
+.green-theme header .navbar .navbar-inner {
+  background: #49bf67; }
+  .green-theme header .navbar .navbar-inner .first {
+    background: #3eb05b; }
+    .green-theme header .navbar .navbar-inner .first .label {
+      color: #3eb05b; }
+    .green-theme header .navbar .navbar-inner .first:hover > a, .green-theme header .navbar .navbar-inner .first:active > a, .green-theme header .navbar .navbar-inner .first:focus > a {
+      background-color: #379e51; }
+  .green-theme header .navbar .navbar-inner .second {
+    background: #379e51; }
+    .green-theme header .navbar .navbar-inner .second .label {
+      color: #379e51; }
+    .green-theme header .navbar .navbar-inner .second:hover > a, .green-theme header .navbar .navbar-inner .second:active > a, .green-theme header .navbar .navbar-inner .second:focus > a {
+      background-color: #318b48; }
+  .green-theme header .navbar .navbar-inner .third {
+    background: #318b48; }
+    .green-theme header .navbar .navbar-inner .third .label {
+      color: #318b48; }
+    .green-theme header .navbar .navbar-inner .third:hover > a, .green-theme header .navbar .navbar-inner .third:active > a, .green-theme header .navbar .navbar-inner .third:focus > a {
+      background-color: #2a783e; }
+  .green-theme header .navbar .navbar-inner .widget .dropdown-menu > li.widget-footer a:hover {
+    background: #49bf67; }
+.green-theme nav .navigation .nav li.nav-header {
+  color: #49bf67; }
+.green-theme nav .navigation .nav li:hover > .dropdown-collapse.collapsed i, .green-theme nav .navigation .nav li:hover > a i, .green-theme nav .navigation .nav li:hover > a:focus i, .green-theme nav .navigation .nav li.active > .dropdown-collapse.collapsed i, .green-theme nav .navigation .nav li.active > a i, .green-theme nav .navigation .nav li.active > a:focus i {
+  color: #49bf67; }
+.green-theme .box .box-header .actions .btn:hover {
+  color: #49bf67; }
+.green-theme h1 [class^="icon-"] {
+  color: #49bf67; }
+.green-theme .dropdown-menu > .active > a, .green-theme .dropdown-menu > .active > a:hover, .green-theme .dropdown-menu > .active > a:focus, .green-theme .dropdown-menu > li > a:hover, .green-theme .dropdown-menu > li > a:focus, .green-theme .dropdown-submenu:hover > a, .green-theme .dropdown-submenu:focus > a {
+  background: #49bf67; }
+.green-theme .fc-event .fc-event-inner {
+  background: #49bf67; }
+.green-theme .daterangepicker .ranges li.active, .green-theme .daterangepicker .ranges li:hover {
+  background: #49bf67;
+  border-color: transparent; }
+.green-theme .daterangepicker td.active, .green-theme .daterangepicker td.active:hover {
+  background: #49bf67; }
+.green-theme .datepicker td span.active:hover, .green-theme .datepicker td span.active:hover:hover, .green-theme .datepicker td span.active.disabled:hover, .green-theme .datepicker td span.active.disabled:hover:hover, .green-theme .datepicker td span.active:active, .green-theme .datepicker td span.active:hover:active, .green-theme .datepicker td span.active.disabled:active, .green-theme .datepicker td span.active.disabled:hover:active, .green-theme .datepicker td span.active.active, .green-theme .datepicker td span.active:hover.active, .green-theme .datepicker td span.active.disabled.active, .green-theme .datepicker td span.active.disabled:hover.active, .green-theme .datepicker td span.active.disabled, .green-theme .datepicker td span.active:hover.disabled, .green-theme .datepicker td span.active.disabled.disabled, .green-theme .datepicker td span.active.disabled:hover.disabled, .green-theme .datepicker td span.active[disabled], .green-theme .datepicker td span.active:hover[disabled], .green-theme .datepicker td span.active.disabled[disabled], .green-theme .datepicker td span.active.disabled:hover[disabled], .green-theme .datepicker td.active:hover, .green-theme .datepicker td.active:hover:hover, .green-theme .datepicker td.active.disabled:hover, .green-theme .datepicker td.active.disabled:hover:hover, .green-theme .datepicker td.active:active, .green-theme .datepicker td.active:hover:active, .green-theme .datepicker td.active.disabled:active, .green-theme .datepicker td.active.disabled:hover:active, .green-theme .datepicker td.active.active, .green-theme .datepicker td.active:hover.active, .green-theme .datepicker td.active.disabled.active, .green-theme .datepicker td.active.disabled:hover.active, .green-theme .datepicker td.active.disabled, .green-theme .datepicker td.active:hover.disabled, .green-theme .datepicker td.active.disabled.disabled, .green-theme .datepicker td.active.disabled:hover.disabled, .green-theme .datepicker td.active[disabled], .green-theme .datepicker td.active:hover[disabled], .green-theme .datepicker td.active.disabled[disabled], .green-theme .datepicker td.active.disabled:hover[disabled] {
+  background: #49bf67; }
