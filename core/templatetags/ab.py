@@ -5,12 +5,13 @@ register = template.Library()
 
 
 class ABTest(template.Node):
-    def __init__(self, avalue, bvalue):
-        self.avalue = self.strip_quotes(avalue)
-        self.bvalue = self.strip_quotes(bvalue)
+    def __init__(self, values):
+        clean_values = [self.strip_quotes(value) for value in values]
+        self.values = clean_values
 
     def render(self, context):
-        return random.choice((self.avalue, self.bvalue))
+        context['choice'] = random.choice(self.values)
+        return random.choice(self.values)
 
     def strip_quotes(self, quoted_string):
         char_at_front = quoted_string[0]
@@ -25,5 +26,6 @@ class ABTest(template.Node):
 
 @register.tag
 def ab(parser, token):
-    tag_name, val1, val2 = token.split_contents()
-    return ABTest(val1, val2)
+    split_token = token.split_contents()
+    values = split_token[1:]
+    return ABTest(values)
