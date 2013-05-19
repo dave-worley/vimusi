@@ -1,0 +1,177 @@
+{% load ab %}
+<!-- header start -->
+<header>
+  <div class='navbar navbar-fixed-top'>
+    <div class='navbar-inner'>
+      <div class='container'>
+        <!-- logo start -->
+        <a class='brand' href='index.html'>
+          <i class='icon-music'></i>
+          <span class='hidden-phone'>Vimusi</span>
+        </a>
+        <!-- logo end -->
+        <ul class='nav pull-right'>
+          <!-- color change -->
+          <li class='dropdown first only-icon'>
+            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+              <i class='icon-adjust'></i>
+            </a>
+            <ul class='dropdown-menu'>
+              <li>
+                <a class='change-color-to-red' href='#'>
+                  <i class='icon-adjust text-error'></i>
+                  Default (Red)
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a class='change-color-to-blue' href='#'>
+                  <i class='icon-adjust text-primary'></i>
+                  Blue
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a class='change-color-to-purple' href='#'>
+                  <i class='icon-adjust text-info'></i>
+                  Purple
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a class='change-color-to-orange' href='#'>
+                  <i class='icon-adjust text-warning'></i>
+                  Orange
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a class='change-color-to-green' href='#'>
+                  <i class='icon-adjust text-success'></i>
+                  Green
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- color change end -->
+          <!-- widget start -->
+          <li class='dropdown second only-icon widget'>
+            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+              <i class='icon-rss'></i>
+
+              <div class='label'>5</div>
+            </a>
+            <ul class='dropdown-menu'>
+              <li>
+                <a href='#'>
+                  <div class='widget-body'>
+                    <div class='pull-left icon'>
+                      <i class='icon-user text-success'></i>
+                    </div>
+                    <div class='pull-left text'>
+                      John Doe signed up
+                      <small class='muted'>just now</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='#'>
+                  <div class='widget-body'>
+                    <div class='pull-left icon'>
+                      <i class='icon-inbox text-error'></i>
+                    </div>
+                    <div class='pull-left text'>
+                      New Order #002
+                      <small class='muted'>3 minutes ago</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='#'>
+                  <div class='widget-body'>
+                    <div class='pull-left icon'>
+                      <i class='icon-comment text-warning'></i>
+                    </div>
+                    <div class='pull-left text'>
+                      America Leannon commented Flatty with veeery long text.
+                      <small class='muted'>1 hour ago</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='#'>
+                  <div class='widget-body'>
+                    <div class='pull-left icon'>
+                      <i class='icon-user text-success'></i>
+                    </div>
+                    <div class='pull-left text'>
+                      Jane Doe signed up
+                      <small class='muted'>last week</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='#'>
+                  <div class='widget-body'>
+                    <div class='pull-left icon'>
+                      <i class='icon-inbox text-error'></i>
+                    </div>
+                    <div class='pull-left text'>
+                      New Order #001
+                      <small class='muted'>1 year ago</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class='widget-footer'>
+                <a href='#'>All notifications</a>
+              </li>
+            </ul>
+          </li>
+          <!-- widget end -->
+          <!-- user menu start -->
+          <li class='dropdown third'>
+            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+              <img alt="Avatar" height="23" src="{{ STATIC_URL }}img/avatar.jpg" width="23"/>
+              <span class='user-name hidden-phone'>Daniel Craig</span>
+              <b class='caret'></b>
+            </a>
+            <ul class='dropdown-menu'>
+              <li>
+                <a href='#'>Profile</a>
+              </li>
+              <li>
+                <a href='#'>Settings</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='#'>Sign out</a>
+              </li>
+            </ul>
+          </li>
+          <!-- user menu end -->
+        </ul>
+        <!-- search form start -->
+        <form accept-charset="UTF-8" action="#" class="navbar-search pull-right hidden-phone" method="post">
+          {% csrf_token %}
+          <input autocomplete="off"
+                 class="search-query span3"
+                 id="q" name="q"
+                 placeholder="{% ab 'Search for Teachers &amp; Classes' 'Search for Classes &amp; Teachers' %}"
+                 type="text"
+                 value=""/>
+        </form>
+        <!-- search form end -->
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header end -->

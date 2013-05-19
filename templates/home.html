@@ -1,4 +1,45 @@
 {% extends 'base.html' %}
+{% load ab %}
+{% block id %}home{% endblock %}
 {% block content %}
-<h1>HI!</h1>
+  <div id="flytrap" class="row">
+    <div class="span6">
+      {% ab '<img src="http://placekitten.com/g/500/300" alt="marketing imagery" />' '<img src="http://placekitten.com/g/550/250" alt="marketing imagery" />' %}
+    </div>
+    <div class="span3">
+      <h2>Take a Class</h2>
+      <a href="#" class="btn btn-primary">Sign Up!</a>
+    </div>
+    <div class="span3">
+      <h2>Become a Teacher</h2>
+      <a href="#" class="btn btn-success">Sign Up!</a>
+    </div>
+  </div>
+  <div id="featured_teachers" class="row">
+    <div class="span12 box bordered-box blue-border">
+      <div class="box-header blue-background">
+        <div class="lead">
+          Featured Teachers
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3">
+          <img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/>
+          <h4>Teacher Name</h4>
+        </div>
+        <div class="span3">
+          <img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/>
+          <h4>Teacher Name</h4>
+        </div>
+        <div class="span3">
+          <img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/>
+          <h4>Teacher Name</h4>
+        </div>
+        <div class="span3">
+          <img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/>
+          <h4>Teacher Name</h4>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
