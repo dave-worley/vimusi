@@ -17,8 +17,10 @@
   </div>
   <div id="featured_teachers" class="row">
     <!-- {% ab 'blue' 'orange' 'red' 'green' %} -->
-    <div class="span12 box bordered-box {{ choice }}-border">
-      <div class="box-header {{ choice }}-background">
+    {% with choice as colorchoice %}
+    <div class="span12 box bordered-box {{ colorchoice }}-border">
+      <div class="box-header {{ colorchoice }}-background">
+        {% endwith %}
         <div class="lead">
           Featured Teachers
         </div>
