@@ -160,8 +160,9 @@
           <!-- user menu end -->
         </ul>
         <!-- search form start -->
-        <form accept-charset="UTF-8" action="#" class="navbar-search pull-right hidden-phone" method="post">
+        <form id="search" accept-charset="UTF-8" action="#" class="navbar-search pull-right hidden-phone" method="post">
           {% csrf_token %}
+          <span>Search</span>
           <input autocomplete="off"
                  class="search-query span3"
                  id="q" name="q"
