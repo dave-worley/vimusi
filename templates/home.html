@@ -45,4 +45,34 @@
       </div>
     </div>
   </div>
+  <div id="featured_classes" class="row">
+    <!-- {% ab 'blue' 'orange' 'red' 'green' 'purple' 'muted' %} -->
+    {% with choice as colorchoice %}
+    <div class="span12 box bordered-box {{ colorchoice }}-border">
+      <div class="box-header {{ colorchoice }}-background">
+        {% endwith %}
+        <div class="lead">
+          Featured Classes
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3">
+          <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
+          <h4><a href="#">Class Name</a></h4>
+        </div>
+        <div class="span3">
+          <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
+          <h4><a href="#">Class Name</a></h4>
+        </div>
+        <div class="span3">
+          <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
+          <h4><a href="#">Class Name</a></h4>
+        </div>
+        <div class="span3">
+          <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
+          <h4><a href="#">Class Name</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

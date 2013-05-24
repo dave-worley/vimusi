@@ -1,7 +1,11 @@
 #footer { font-size: 80%; border-top: 1px solid #e7e7e7; background-color: #fff}
 #searchform { margin: 0; padding: 0; display: inline}
 #flytrap { margin-top: 2em; }
+#featured_classes,
 #featured_teachers { margin-top: 2em}
+#featured_classes .box,
+#featured_teachers .box { background-color: #fff}
+#featured_classes .span3,
 #featured_teachers .span3 { text-align: center; padding-top: 1.5em}
 #maincontain { margin-bottom: 20em; }
 #search span { color: #fff}
