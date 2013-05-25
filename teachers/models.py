@@ -14,4 +14,4 @@ class TeacherProfile(models.Model):
     def __unicode__(self):
         return self.user.username
     def get_absolute_url(self):
-        return "/members/%s/" % self.user.username
+        return "/teachers/%s/" % self.user.username

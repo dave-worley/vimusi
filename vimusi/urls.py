@@ -5,6 +5,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', include('core.urls')),
+    url(r'^teachers/', include('teachers.urls')),
+    url(r'^classes/', include('class_sessions.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
