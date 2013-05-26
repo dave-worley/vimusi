@@ -1,5 +1,4 @@
 Django==1.5.1
 Unipath==1.0
 distribute==0.6.43
-./django-registration.tar.gz==0.9b1
 wsgiref==0.1.2
