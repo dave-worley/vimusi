@@ -1,6 +1,45 @@
 {% extends 'base.html' %}
 {% block title %}Class Profile{% endblock %}
 {% block bodyid %}classprofile{% endblock %}
+{% block extrahead %}
+  <script type="text/javascript" src="/static/js/holder/holder.js"></script>
+{% endblock %}
 {% block content %}
-  <h1>Class Profile</h1>
+  <div class="row-fluid">
+    <div class="span7 box">
+      <div class="box-header orange-background">
+        <div class="lead">
+          Introduction to Jazz Guitar 1
+        </div>
+      </div>
+      <div class="box-content">
+        <img data-src="holder.js/670x300" alt="Video Placeholder (670x300)" style="width: 670px; height: 300px;"
+             src="holder.js/670x300/industrial">
+      </div>
+    </div>
+    <div class="span5 box">
+      <div class="box-header purple-background">
+        <div class="lead">
+          Introduction to Jazz Guitar 1
+        </div>
+      </div>
+      <div class="box-content">
+        <div class="thumbnail">
+          <div class="inner-spacer">
+            <h2>Class Description</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span5">
+      <div class="box">
+        <div class="box-content">
+          <p>
+            <button class="btn btn-large btn-success" type="button">Take Class!</button>
+            <button class="btn btn-large btn-primary pull-right" type="button">Request Class Time</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
