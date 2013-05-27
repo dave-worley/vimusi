@@ -120,7 +120,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'registration',
     'core',
-    'teachers'
+    'teachers',
+    'help'
 )
 
 # A sample logging configuration. The only tangible logging

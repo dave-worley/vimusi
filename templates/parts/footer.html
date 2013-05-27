@@ -1,0 +1,13 @@
+{% load ab %}
+<footer>
+  <div id="footer" class="navbar navbar-fixed-bottom">
+    <div class="container">
+      <ul class="nav pull-right">
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/terms/">Privacy Policy &amp; Terms of Use</a></li>
+        <li><a href="/help/">{% ab 'Contact Us' 'Help' %}</a></li>
+        <li><a href="http://www.zenlab.com">&copy;2013 Zen Lab, LLC</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
