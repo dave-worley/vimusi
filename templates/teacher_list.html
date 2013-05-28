@@ -2,7 +2,30 @@
 {% block title %}Teachers{% endblock %}
 {% block bodyid %}teacher-list{% endblock %}
 {% block content %}
-  <div class="page-header">
-    <h2 class="box-title">Teachers</h2>
+  <div class="row">
+    <div class="span12 box">
+      <div class="box-header">
+        <div class="lead">
+          Featured Teachers
+        </div>
+      </div>
+      <div class="box-content">
+        <div class="thumbnail green-border">
+          <div class="inner-spacer">
+            {% for i in counter %}
+              <div class="row-fluid">
+                {% for n in counter %}
+                <div class="span3">
+                  <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200"
+                                                     alt="Featured Teacher Placeholder"/></a>
+                  <h4><a href="#">Teacher Name</a></h4>
+                </div>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}

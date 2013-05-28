@@ -12,29 +12,17 @@
       <div class="box-content">
         <div class="thumbnail green-border">
           <div class="inner-spacer">
-        {% for i in counter %}
-          <div class="row-fluid">
-            <div class="span3">
-              <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200"
-                                              alt="Featured Teacher Placeholder"/></a>
-              <h4><a href="#">Class Name</a></h4>
-            </div>
-            <div class="span3">
-              <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200"
-                                              alt="Featured Teacher Placeholder"/></a>
-              <h4><a href="#">Class Name</a></h4>
-            </div>
-            <div class="span3">
-              <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
-              <h4><a href="/classes/class1/">Class Name</a></h4>
-            </div>
-            <div class="span3">
-              <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200"
-                                              alt="Featured Teacher Placeholder"/></a>
-              <h4><a href="/classes/class1/">Class Name</a></h4>
-            </div>
-          </div>
-        {% endfor %}
+            {% for i in counter %}
+              <div class="row-fluid">
+                {% for n in counter %}
+                  <div class="span3">
+                    <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200"
+                                                    alt="Featured Class Placeholder"/></a>
+                    <h4><a href="#">Class Name</a></h4>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
