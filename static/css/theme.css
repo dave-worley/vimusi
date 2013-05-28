@@ -34,7 +34,7 @@ header .navbar.navbar-fixed-top .navbar-inner { padding: 0 10px}
 header .navbar .navbar-inner { background: #f34541;   background-image: none;   filter: none;   border-bottom: none;   -webkit-box-shadow: none;   -moz-box-shadow: none;   box-shadow: none}
 header .navbar .navbar-inner .brand { color: white;   padding-bottom: 0;   text-shadow: none}
 header .navbar .navbar-inner .brand [class*=icon-] { margin-right: 10px}
-header .navbar .navbar-inner .brand:hover [class*=icon-]:before { content: "\f004"}
+header .navbar .navbar-inner .brand:hover [class*=icon-] { color: #ffa500}
 header .navbar .navbar-inner .navbar-search { margin-right: 10px}
 header .navbar .navbar-inner .navbar-search input { opacity: 0.5;   padding: 4px 7px;   -webkit-border-radius: 0;   -moz-border-radius: 0;   border-radius: 0}
 header .navbar .navbar-inner .navbar-search input:hover, header .navbar .navbar-inner .navbar-search input:focus { opacity: 1}

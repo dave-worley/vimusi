@@ -48,7 +48,7 @@
   <![endif]-->
 </head>
 
-<body id="{% block bodyid %}{% endblock %}">
+<body id="{% block bodyid %}{% endblock %}" class="blue-theme">
 {% include 'parts/header.html' %}
 {% block header %}{% endblock %}
 <div class="container" id="maincontain">{% block content %}{% endblock %}</div>
@@ -81,8 +81,8 @@
 <script src="{{ STATIC_URL }}js/bootstrap-daterangepicker.min.js" type="text/javascript"></script>
 <script src="{{ STATIC_URL }}js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 <script src="{{ STATIC_URL }}js/retina.js" type="text/javascript"></script>
-<script src="{{ STATIC_URL }}js/demo.js" type="text/javascript"></script>
-<script src="{{ STATIC_URL }}js/demo-editing.js" type="text/javascript"></script>
+<!--<script src="{{ STATIC_URL }}js/demo.js" type="text/javascript"></script>
+<script src="{{ STATIC_URL }}js/demo-editing.js" type="text/javascript"></script>-->
 <script src="{{ STATIC_URL }}js/tmpl.min.js" type="text/javascript"></script>
 <script src="{{ STATIC_URL }}js/load-image.min.js" type="text/javascript"></script>
 <script src="{{ STATIC_URL }}js/canvas-to-blob.min.js" type="text/javascript"></script>
