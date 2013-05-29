@@ -9,7 +9,7 @@ class HomeView(TemplateView):
         return response
 
 class AboutUsView(TemplateView):
-    template_name = 'about_us.html'
+    template_name = 'help/about_us.html'
 
     def get(self, request, *args, **kwargs):
         kwargs['logged_in'] = True
@@ -17,7 +17,7 @@ class AboutUsView(TemplateView):
         return response
 
 class TermsView(TemplateView):
-    template_name = 'terms.html'
+    template_name = 'help/terms.html'
 
     def get(self, request, *args, **kwargs):
         kwargs['logged_in'] = True

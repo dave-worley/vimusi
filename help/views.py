@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 
 class HelpView(TemplateView):
-    template_name = 'help.html'
+    template_name = 'help/help.html'
 
     def get(self, request, *args, **kwargs):
         kwargs['logged_in'] = True

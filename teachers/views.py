@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 
 class ProfileView(TemplateView):
-    template_name = 'teacher_profile.html'
+    template_name = 'teachers/teacher_profile.html'
 
     def get(self, request, *args, **kwargs):
         kwargs['logged_in'] = True
@@ -9,7 +9,7 @@ class ProfileView(TemplateView):
         return response
 
 class TeacherListView(TemplateView):
-    template_name = 'teacher_list.html'
+    template_name = 'teachers/teacher_list.html'
 
     def get(self, request, *args, **kwargs):
         kwargs['logged_in'] = True
