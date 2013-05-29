@@ -12,7 +12,7 @@
       {{ form.non_field_errors }}
     </div>
     {% endif %}
-    <form class="form-horizontal span6" method="post" action="{% url django.contrib.auth.views.login %}">
+    <form class="form-horizontal span6" method="post" action="{% url 'django.contrib.auth.views.login' %}">
       <fieldset>
         {% csrf_token %}
         <div class="control-group">

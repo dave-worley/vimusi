@@ -146,23 +146,27 @@
           <!-- widget end -->
           <!-- user menu start -->
           <li class='dropdown second'>
+            {% if user.is_authenticated %}
             <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
               <img alt="Avatar" height="23" src="{{ STATIC_URL }}img/avatar.jpg" width="23"/>
-              <span class='user-name hidden-phone'>David Worley</span>
+              <span class='user-name hidden-phone'>{{ user.username }}</span>
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu'>
               <li>
-                <a href='#'>Profile</a>
+                <a href='/accounts/profile/'>Profile</a>
               </li>
               <li>
-                <a href='#'>Settings</a>
+                <a href='/accounts/settings/'>Settings</a>
               </li>
               <li class='divider'></li>
               <li>
-                <a href='#'>Sign out</a>
+                <a href='/accounts/logout/'>Sign out</a>
               </li>
             </ul>
+            {% else %}
+              <a href="/accounts/login/">Log In</a>
+            {% endif %}
           </li>
           <!-- user menu end -->
         </ul>
