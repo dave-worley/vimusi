@@ -17,3 +17,12 @@ class ClassListView(TemplateView):
         kwargs['counter'] = range(0,4)
         response = super(ClassListView, self).get(request, *args, **kwargs)
         return response
+
+class ClassRequestView(TemplateView):
+    template_name = 'classes/class_request.html'
+
+    def get(self, request, *args, **kwargs):
+        kwargs['logged_in'] = True
+        kwargs['counter'] = range(0,4)
+        response = super(ClassRequestView, self).get(request, *args, **kwargs)
+        return response

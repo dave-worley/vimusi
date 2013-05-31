@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load ab %}
+{% block title %}Request a Class{% endblock %}
+{% block bodyid %}class-request{% endblock %}
+{% block content %}
+  <div class="row-fluid">
+    <form class="form form-horizontal">
+      <fieldset>
+        <div class="span7 offset2">
+          <div class="control-group">
+            <div class="controls">
+              <h4>{% ab 'Introduction to Guitar' 'Guitar for Beginners' 'Beginning Blues Guitar' 'Fingerpicking 101 with John Something' %}</h4>
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="control-label">
+              <img src="http://placekitten.com/g/100/100" alt="Class Image Placeholder"/>
+            </div>
+            <div class="controls">
+              <p>Class description would go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl est, vulputate at porttitor non, interdum a mauris. Phasellus imperdiet gravida pulvinar.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <select class="span9" name="avaialable-times" id="avaialable-times">
+                <option value="time1">at 5:55 PM on Wednesday, September 25</option>
+                <option value="time2">at 5:55 PM on Thursday, September 26</option>
+                <option value="time3">at 5:55 PM on Friday, September 27</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Comment</label>
+            <div class="controls">
+              <input class="span12" id="city" placeholder="Enter a comment here" type="text">
+              <p class="help-block">Enter a short message to the teacher here.</p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-actions span7 offset2">
+        <div class="text-right">
+          <div class="btn btn-success btn-large">
+            <i class="icon-ok-sign"></i>
+            Request Class!
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}
