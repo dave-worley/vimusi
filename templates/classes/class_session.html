@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load ab %}
+{% block title %}
+  {% ab 'Introduction to Guitar' 'Guitar for Beginners' 'Beginning Blues Guitar' 'Fingerpicking 101 with John Something' %}{% endblock %}
+{% block bodyid %}class-session{% endblock %}
+{% block extrahead %}
+  <script type="text/javascript" src="/static/js/holder/holder.js"></script>
+{% endblock %}
+{% block content %}
+  <div class="row-fluid">
+    <div class="span7 box">
+      <div class="box-header orange-background">
+        <div class="lead">
+          Introduction to Jazz Guitar 1
+        </div>
+      </div>
+      <div class="box-content">
+        <img data-src="holder.js/670x300" alt="Video Placeholder (670x300)" style="width: 670px; height: 300px;"
+             src="holder.js/670x300/industrial">
+      </div>
+    </div>
+    <div class="span5 box">
+      <div class="box-header purple-background">
+        <div class="lead">
+          Class Chat
+        </div>
+      </div>
+      <div id="class-chatbox" class="box-content">
+        <div class="thumbnail">
+          <div class="inner-spacer">
+            {% for i in counter %}
+              <div class="row-fluid">
+                <p class="myline span12">This is a comment I've made!</p>
+
+                <p class="theirline span12"><strong><a href="/users/username/">username</a>:</strong> This is a comment
+                  they've made!</p>
+
+                <p class="theirline span12"><strong><a href="/users/username/">username</a>:</strong> This is a comment
+                  they've made!</p>
+              </div>
+            {% endfor %}
+            <div id="class-talker">
+              <form class="form-inline">
+                <div class="input-append">
+                  <input type="text"/>
+                  <span class="add-on"><i class="icon-comments-alt"></i></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
