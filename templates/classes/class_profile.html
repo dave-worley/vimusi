@@ -53,11 +53,7 @@
         <div class="inner-spacer">
           <div class="row-fluid">
             {% for i in counter %}
-              <div class="span3">
-                <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200"
-                                                alt="Related Class Placeholder"/></a>
-                <h4><a href="#">Class Name</a></h4>
-              </div>
+              {% include 'classes/class.html' %}
             {% endfor %}
           </div>
         </div>
