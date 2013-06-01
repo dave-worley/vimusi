@@ -1,0 +1,34 @@
+{% load ab %}
+<div class="teacher box">
+  <div class="box-header purple-background">
+    <div class="lead">
+      <a href="/teachers/teacher1/">{% ab 'John Adams' 'ultramouse' 'Sarah B.' 'Chicago Joe' 'anthonya' 'Bryan Worley' %}</a>
+    </div>
+    <div class="actions">
+      <a class="btn" href="#"><i class="icon-heart"></i> {% ab '3' '12' '37' '45' '54' '64' '78' '81' '92' '103' %}</a>
+      <a class="btn" href="#"><i class="icon-quote-left"></i> {% ab '3' '12' '37' '45' '54' '64' '78' '81' '92' '103' %}</a>
+    </div>
+  </div>
+  <div class="box-content">
+    <div class="row-fluid">
+      <div class="span5">
+        <a href="/teachers/teacher1/">
+          <img src="http://{% ab 'placehold.it/' 'placekitten.com/g/' %}{% ab '104' '105' '106' %}/{% ab '104' '105' '106' %}"
+               alt="Featured Teacher Placeholder"/>
+        </a>
+      </div>
+      <div class="span7">
+        <ul class="unstyled">
+          <li>
+            <strong>Teaches:</strong><br/>
+            <a href="/teachers/by/guitar/">{% ab 'Guitar' 'Bass Guitar, Stand-Up Bass, Guitar' 'Stand-Up Bass' 'Drums' 'Flute' 'Piccolo' %}</a>
+          </li>
+          <li>
+            <strong>Availability:</strong><br/> {% ab 'Anytime' 'Weekdays' 'Weekday Evenings' 'Weekends' 'Special Availability' %}
+          </li>
+          <li><a class="btn btn-small btn-success" href="/classes/request/1/">Request a Class!</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,30 +2,35 @@
 {% block title %}Teachers{% endblock %}
 {% block bodyid %}teacher-list{% endblock %}
 {% block content %}
+  <div class="page-header">
+    <h2>
+      Featured Teachers
+    </h2>
+  </div>
   <div class="row">
     <div class="span12 box">
-      <div class="box-header">
-        <div class="lead">
-          Featured Teachers
-        </div>
-      </div>
       <div class="box-content">
-        <div class="thumbnail green-border">
-          <div class="inner-spacer">
+          <div id="teacher-masonry">
             {% for i in counter %}
-              <div class="row-fluid">
-                {% for n in counter %}
-                <div class="span3">
-                  <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200"
-                                                     alt="Featured Teacher Placeholder"/></a>
-                  <h4><a href="#">Teacher Name</a></h4>
-                </div>
-                {% endfor %}
-              </div>
+              {% for n in counter %}
+                {% include 'teachers/teacher.html' %}
+              {% endfor %}
             {% endfor %}
           </div>
-        </div>
       </div>
     </div>
   </div>
+{% endblock %}
+{% block scripts %}
+  <script type="text/javascript" src="{{ STATIC_URL }}js/masonry/jquery.masonry.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#teacher-masonry').imagesLoaded(function () {
+        $('#teacher-masonry').masonry({
+          itemSelector: '.teacher',
+          columnWidth: 290
+        });
+      });
+    });
+  </script>
 {% endblock %}

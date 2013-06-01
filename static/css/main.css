@@ -22,3 +22,12 @@ header .navbar .nav > li > a:focus, header .navbar .nav > li > a:hover,
 #class-chatbox #class-talker input { width: 433px;}
 #class-chatbox .myline { background-color: #e7e7e7; text-align: right; padding: 0.25em 0.5em; }
 .navbar .nav > li > a.usernav { padding: 9px 15px 8px; }
+div.teacher-row { margin-bottom: 1em; }
+div.teacher.thumbnail,
+div.teacher { float: left; width: 270px; margin: 0 1em 1em 0; background-color: #fff; }
+div.teacher strong { font-size: 80%; }
+div.teacher div.box-content { padding: 1em 1em 0;}
+div.teacher div.actions a { color: #fff; font-size: 80%; }
+div.teacher div.lead a { color: #fff; font-size: 70%; }
+div.teacher.box .box-header .lead { margin: 5px 0 5px 10px;}
+div.teacher.box .box-header .actions { margin: 7px 5px 0 0;}
