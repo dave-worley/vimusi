@@ -13,7 +13,9 @@
         <ul class="nav">
           <li class="{% ancestor '/classes/' %}"><a href="/classes/">Classes</a></li>
           <li class="{% ancestor '/teachers/' %}"><a href="/teachers/">Teachers</a></li>
-          <li class="{% ancestor '/accounts/' %}"><a href="/accounts/register/">Sign Up!</a></li>
+          {% if not user.is_authenticated %}
+            <li class="{% ancestor '/accounts/' %}"><a href="/accounts/register/">Sign Up!</a></li>
+          {% endif %}
         </ul>
         <!-- logo end -->
         <ul class='nav pull-right'>
@@ -61,109 +63,118 @@
           </li>
           -->
           <!-- color change end -->
-          <!-- widget start -->
-          <li class='dropdown first only-icon widget'>
-            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-              <i class='icon-rss'></i>
+          {% if notifications %}
+            <!-- notification widget start -->
+            <li class='dropdown first only-icon widget'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                <i class='icon-rss'></i>
 
-              <div class='label'>5</div>
-            </a>
-            <ul class='dropdown-menu'>
-              <li>
-                <a href='#'>
-                  <div class='widget-body'>
-                    <div class='pull-left icon'>
-                      <i class='icon-user text-success'></i>
+                <div class='label'>5</div>
+              </a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='#'>
+                    <div class='widget-body'>
+                      <div class='pull-left icon'>
+                        <i class='icon-user text-success'></i>
+                      </div>
+                      <div class='pull-left text'>
+                        John Doe signed up
+                        <small class='muted'>just now</small>
+                      </div>
                     </div>
-                    <div class='pull-left text'>
-                      John Doe signed up
-                      <small class='muted'>just now</small>
+                  </a>
+                </li>
+                <li class='divider'></li>
+                <li>
+                  <a href='#'>
+                    <div class='widget-body'>
+                      <div class='pull-left icon'>
+                        <i class='icon-inbox text-error'></i>
+                      </div>
+                      <div class='pull-left text'>
+                        New Order #002
+                        <small class='muted'>3 minutes ago</small>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li class='divider'></li>
-              <li>
-                <a href='#'>
-                  <div class='widget-body'>
-                    <div class='pull-left icon'>
-                      <i class='icon-inbox text-error'></i>
+                  </a>
+                </li>
+                <li class='divider'></li>
+                <li>
+                  <a href='#'>
+                    <div class='widget-body'>
+                      <div class='pull-left icon'>
+                        <i class='icon-comment text-warning'></i>
+                      </div>
+                      <div class='pull-left text'>
+                        America Leannon commented Flatty with veeery long text.
+                        <small class='muted'>1 hour ago</small>
+                      </div>
                     </div>
-                    <div class='pull-left text'>
-                      New Order #002
-                      <small class='muted'>3 minutes ago</small>
+                  </a>
+                </li>
+                <li class='divider'></li>
+                <li>
+                  <a href='#'>
+                    <div class='widget-body'>
+                      <div class='pull-left icon'>
+                        <i class='icon-user text-success'></i>
+                      </div>
+                      <div class='pull-left text'>
+                        Jane Doe signed up
+                        <small class='muted'>last week</small>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li class='divider'></li>
-              <li>
-                <a href='#'>
-                  <div class='widget-body'>
-                    <div class='pull-left icon'>
-                      <i class='icon-comment text-warning'></i>
+                  </a>
+                </li>
+                <li class='divider'></li>
+                <li>
+                  <a href='#'>
+                    <div class='widget-body'>
+                      <div class='pull-left icon'>
+                        <i class='icon-inbox text-error'></i>
+                      </div>
+                      <div class='pull-left text'>
+                        New Order #001
+                        <small class='muted'>1 year ago</small>
+                      </div>
                     </div>
-                    <div class='pull-left text'>
-                      America Leannon commented Flatty with veeery long text.
-                      <small class='muted'>1 hour ago</small>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class='divider'></li>
-              <li>
-                <a href='#'>
-                  <div class='widget-body'>
-                    <div class='pull-left icon'>
-                      <i class='icon-user text-success'></i>
-                    </div>
-                    <div class='pull-left text'>
-                      Jane Doe signed up
-                      <small class='muted'>last week</small>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class='divider'></li>
-              <li>
-                <a href='#'>
-                  <div class='widget-body'>
-                    <div class='pull-left icon'>
-                      <i class='icon-inbox text-error'></i>
-                    </div>
-                    <div class='pull-left text'>
-                      New Order #001
-                      <small class='muted'>1 year ago</small>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class='widget-footer'>
-                <a href='#'>All notifications</a>
-              </li>
-            </ul>
-          </li>
-          <!-- widget end -->
+                  </a>
+                </li>
+                <li class='widget-footer'>
+                  <a href='#'>All notifications</a>
+                </li>
+              </ul>
+            </li>
+            {% else %}
+            <li class='first only-icon widget'>
+              <a class="disabled" href='javascript:return false;'>
+                <i class='icon-rss'></i>
+                <div class='label'>0</div>
+              </a>
+            </li>
+            <!-- notification widget end -->
+          {% endif %}
           <!-- user menu start -->
           <li class='dropdown second'>
             {% if user.is_authenticated %}
-            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-              <img alt="Avatar" height="23" src="{{ STATIC_URL }}img/avatar.jpg" width="23"/>
-              <span class='user-name hidden-phone'>{{ user.username }}</span>
-              <b class='caret'></b>
-            </a>
-            <ul class='dropdown-menu'>
-              <li>
-                <a href='/accounts/profile/'>Profile</a>
-              </li>
-              <li>
-                <a href='/accounts/settings/'>Settings</a>
-              </li>
-              <li class='divider'></li>
-              <li>
-                <a href='/accounts/logout/'>Sign out</a>
-              </li>
-            </ul>
+              <a class='dropdown-toggle usernav' data-toggle='dropdown' href='#'>
+                <img alt="Avatar" height="23" src="{{ STATIC_URL }}img/avatar.jpg" width="23"/>
+                <span class='user-name hidden-phone'>{{ user.username }}</span>
+                <b class='caret'></b>
+              </a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/accounts/profile/'>Profile</a>
+                </li>
+                <li>
+                  <a href='/accounts/settings/'>Settings</a>
+                </li>
+                <li class='divider'></li>
+                <li>
+                  <a href='/accounts/logout/'>Sign out</a>
+                </li>
+              </ul>
             {% else %}
               <a href="/accounts/login/">Log In</a>
             {% endif %}

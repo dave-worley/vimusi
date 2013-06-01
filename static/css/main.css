@@ -21,3 +21,4 @@ header .navbar .nav > li > a:focus, header .navbar .nav > li > a:hover,
 #class-chatbox #class-talker { width: 100%; position: absolute; left:0; bottom: 0;}
 #class-chatbox #class-talker input { width: 433px;}
 #class-chatbox .myline { background-color: #e7e7e7; text-align: right; padding: 0.25em 0.5em; }
+.navbar .nav > li > a.usernav { padding: 9px 15px 8px; }
