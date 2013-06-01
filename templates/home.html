@@ -8,7 +8,11 @@
     </div>
     <div class="span3">
       <h2>Take a Class</h2>
-      <a href="#" class="btn btn-warning">Sign Up!</a>
+      {% if not user.is_authenticated %}
+        <a href="{% url 'registration_register' %}" class="btn btn-warning">Sign Up!</a>
+      {% else %}
+        <a href="{% url 'class_list' %}" class="btn btn-warning">Find Classes!</a>
+      {% endif %}
     </div>
     <div class="span3">
       <h2>Become a Teacher</h2>
@@ -18,67 +22,71 @@
   <div id="featured_teachers" class="row">
     <!-- {% ab 'blue' 'orange' 'red' 'green' 'purple' %} -->
     {% with choice as colorchoice %}
-    <div class="span12 box bordered-box {{ colorchoice }}-border">
+      <div class="span12 box bordered-box {{ colorchoice }}-border">
       <div class="box-header {{ colorchoice }}-background">
-        {% endwith %}
-        <div class="lead">
-          Featured Teachers
-        </div>
-        <div class="actions">
-          <a class="btn" href="/teachers/">See More <i class="icon-double-angle-right"></i></a>
-        </div>
+    {% endwith %}
+    <div class="lead">
+      Featured Teachers
+    </div>
+    <div class="actions">
+      <a class="btn" href="/teachers/">See More <i class="icon-double-angle-right"></i></a>
+    </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200"
+                                           alt="Featured Teacher Placeholder"/></a>
+        <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
       </div>
-      <div class="row">
-        <div class="span3">
-          <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
-          <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
-        </div>
-        <div class="span3">
-          <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
-          <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
-        </div>
-        <div class="span3">
-          <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
-          <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
-        </div>
-        <div class="span3">
-          <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200" alt="Featured Teacher Placeholder"/></a>
-          <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
-        </div>
+      <div class="span3">
+        <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200"
+                                           alt="Featured Teacher Placeholder"/></a>
+        <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
       </div>
+      <div class="span3">
+        <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200"
+                                           alt="Featured Teacher Placeholder"/></a>
+        <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
+      </div>
+      <div class="span3">
+        <a href="/teachers/teacher1/"><img src="http://placekitten.com/g/200/200"
+                                           alt="Featured Teacher Placeholder"/></a>
+        <h4><a href="/teachers/teacher1/">Teacher Name</a></h4>
+      </div>
+    </div>
     </div>
   </div>
   <div id="featured_classes" class="row">
     <!-- {% ab 'blue' 'orange' 'red' 'green' 'purple' 'muted' %} -->
     {% with choice as colorchoice %}
-    <div class="span12 box bordered-box {{ colorchoice }}-border">
+      <div class="span12 box bordered-box {{ colorchoice }}-border">
       <div class="box-header {{ colorchoice }}-background">
-        {% endwith %}
-        <div class="lead">
-          Featured Classes
-        </div>
-        <div class="actions">
-          <a class="btn" href="/classes/">See More <i class="icon-double-angle-right"></i></a>
-        </div>
+    {% endwith %}
+    <div class="lead">
+      Featured Classes
+    </div>
+    <div class="actions">
+      <a class="btn" href="/classes/">See More <i class="icon-double-angle-right"></i></a>
+    </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+        <h4><a href="#">Class Name</a></h4>
       </div>
-      <div class="row">
-        <div class="span3">
-          <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
-          <h4><a href="#">Class Name</a></h4>
-        </div>
-        <div class="span3">
-          <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
-          <h4><a href="#">Class Name</a></h4>
-        </div>
-        <div class="span3">
-          <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
-          <h4><a href="/classes/class1/">Class Name</a></h4>
-        </div>
-        <div class="span3">
-          <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
-          <h4><a href="/classes/class1/">Class Name</a></h4>
-        </div>
+      <div class="span3">
+        <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+        <h4><a href="#">Class Name</a></h4>
       </div>
+      <div class="span3">
+        <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+        <h4><a href="/classes/class1/">Class Name</a></h4>
+      </div>
+      <div class="span3">
+        <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+        <h4><a href="/classes/class1/">Class Name</a></h4>
+      </div>
+    </div>
     </div>
   </div>
 {% endblock %}
