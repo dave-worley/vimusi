@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block title %}Your Dashboard{% endblock %}
+{% block bodyid %}teacherdashboard{% endblock %}
+{% block extrahead %}
+  <link href="{{ STATIC_URL }}css/fullcalendar.css" media="all" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <div class="page-header">
+    <h2>Your Dashboard</h2>
+  </div>
+  <div class="row-fluid">
+    <div class="span3 box">
+      <div class="quick-link-box green-background">
+        <i class="icon-magic"></i>
+        <h4 class="title">Create a Class</h4>
+      </div>
+    </div>
+    <div class="span3 box">
+      <div class="quick-link-box purple-background">
+        <i class="icon-money"></i>
+        <h4 class="title">View Class History</h4>
+      </div>
+    </div>
+    <div class="span3 box">
+      <div class="quick-link-box orange-background">
+        <i class="icon-cogs"></i>
+        <h4 class="title">Teacher Settings</h4>
+      </div>
+    </div>
+    <div class="span3 box">
+      <div class="quick-link-box dark-blue-background">
+        <i class="icon-file"></i>
+        <h4 class="title">Manage Files</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6 box">
+      <div class="box-header red-background">
+        <div class="lead">
+          Class Schedule
+        </div>
+      </div>
+      <div class="thumbnail">
+        <div class="inner-spacer"><div id="calendar"></div></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block scripts %}
+  <script type="text/javascript" src="{{ STATIC_URL }}js/fullcalendar.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      date = new Date();
+      d = date.getDate();
+      m = date.getMonth();
+      y = date.getFullYear();
+      $("#calendar").fullCalendar({
+        editable: true,
+        droppable: false,
+        header: {
+          left: '',
+          center: 'prev,title,next',
+          right: ''
+        },
+/*        drop: function (date, allDay) {
+          var copiedEventObject, originalEventObject;
+
+          originalEventObject = $(this).data("eventObject");
+          copiedEventObject = $.extend({}, originalEventObject);
+          copiedEventObject.start = date;
+          copiedEventObject.allDay = allDay;
+          $("#calendar").fullCalendar("renderEvent", copiedEventObject, true);
+          if ($("#drop-remove").is(":checked")) {
+            return $(this).remove();
+          }
+        },*/
+        events: [
+          {
+            title: "All Day Event",
+            start: new Date(y, m, 1)
+          },
+          {
+            title: "Long Event",
+            start: new Date(y, m, d - 5),
+            end: new Date(y, m, d - 2)
+          },
+          {
+            id: 999,
+            title: "Repeating Event",
+            start: new Date(y, m, d - 3, 16, 0),
+            allDay: false
+          },
+          {
+            id: 999,
+            title: "Repeating Event",
+            start: new Date(y, m, d + 4, 16, 0),
+            allDay: false
+          },
+          {
+            title: "Meeting",
+            start: new Date(y, m, d, 10, 30),
+            allDay: false
+          },
+          {
+            title: "Lunch",
+            start: new Date(y, m, d, 12, 0),
+            end: new Date(y, m, d, 14, 0),
+            allDay: false
+          },
+          {
+            title: "Birthday Party",
+            start: new Date(y, m, d + 1, 19, 0),
+            end: new Date(y, m, d + 1, 22, 30),
+            allDay: false
+          },
+          {
+            title: "Click for Google",
+            start: new Date(y, m, 28),
+            end: new Date(y, m, 29),
+            url: "http://google.com/"
+          }
+        ]
+      });
+    });
+  </script>
+{% endblock %}
