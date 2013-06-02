@@ -1,13 +1,9 @@
+body,
+.lead,
+h1, h2, h3, h4, h5, h6 { font-family: 'Arimo', 'Helvetica', sans-serif}
 #maincontain { padding: 2em 0; }
 #footer { font-size: 80%; border-top: 1px solid #e7e7e7; background-color: #fff}
 #searchform { margin: 0; padding: 0; display: inline}
-#flytrap {  }
-#featured_classes,
-#featured_teachers { margin-top: 2em}
-#featured_classes .box,
-#featured_teachers .box { background-color: #fff}
-#featured_classes .span3,
-#featured_teachers .span3 { text-align: center; padding-top: 1.5em}
 #search span { color: #fff}
 
 .navbar .nav > .active > a,
@@ -31,3 +27,12 @@ div.teacher div.actions a { color: #fff; font-size: 80%; }
 div.teacher div.lead a { color: #fff; font-size: 70%; }
 div.teacher.box .box-header .lead { margin: 5px 0 5px 10px;}
 div.teacher.box .box-header .actions { margin: 7px 5px 0 0;}
+
+#featured_classes,
+#featured_teachers { margin-top: 2em}
+#featured_classes .row-fluid .box .box-header.blue-background,
+#featured_teachers .row-fluid .box .box-header.blue-background { background-color: #fff !important;}
+#featured_classes .row-fluid .box .box-header.blue-background a,
+#featured_teachers .row-fluid .box .box-header.blue-background a { color: #666; }
+
+.featured-teacher { padding: 1em 0;}
