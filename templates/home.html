@@ -27,19 +27,19 @@
           Featured Teachers
         </div>
         <div class="actions">
-          <a class="btn" href="/teachers/">See More <i class="icon-double-angle-right"></i></a>
+          <a class="btn" href="{% url 'teacher_list' %}">See More <i class="icon-double-angle-right"></i></a>
         </div>
       </div>
       <div class="row-fluid">
         {% for i in counter %}
           <div class="featured-teacher span3">
             <p><a
-              href="/teachers/teacher1/">{% ab 'John Adams' 'ultramouse' 'Sarah B.' 'Chicago Joe' 'anthonya' 'Bryan Worley' %}</a>
+              href="{% url 'teacher_profile' 'teacher1' %}">{% ab 'John Adams' 'ultramouse' 'Sarah B.' 'Chicago Joe' 'anthonya' 'Bryan Worley' %}</a>
             </p>
 
             <div class="row-fluid">
               <div class="span5">
-                <a href="/teachers/teacher1/">
+                <a href="{% url 'teacher_profile' 'teacher1' %}">
                   <img src="http://{% ab 'placehold.it/' 'placekitten.com/g/' %}{% ab '104' '105' '106' %}/{% ab '104' '105' '106' %}"
                        alt="Featured Teacher Placeholder"/>
                 </a>
@@ -54,7 +54,7 @@
                   <li>
                     <strong>Availability:</strong><br/> {% ab 'Anytime' 'Weekdays' 'Weekday Evenings' 'Weekends' 'Special Availability' %}
                   </li>
-                  <li><a class="btn btn-small btn-success" href="/classes/request/1/">Request a Class!</a></li>
+                  <li><a class="btn btn-small btn-success" href="{% url 'class_request' 1 %}">Request a Class!</a></li>
                 </ul>
               </div>
             </div>
@@ -70,25 +70,25 @@
           Featured Classes
         </div>
         <div class="actions">
-          <a class="btn" href="/classes/">See More <i class="icon-double-angle-right"></i></a>
+          <a class="btn" href="{% url 'class_list' %}">See More <i class="icon-double-angle-right"></i></a>
         </div>
       </div>
       <div class="row">
         <div class="span3">
-          <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+          <a href="{% url 'class_profile' 'class1' %}"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
           <h4><a href="#">Class Name</a></h4>
         </div>
         <div class="span3">
-          <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+          <a href="{% url 'class_profile' 'class1' %}"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
           <h4><a href="#">Class Name</a></h4>
         </div>
         <div class="span3">
-          <a href="#"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
-          <h4><a href="/classes/class1/">Class Name</a></h4>
+          <a href="{% url 'class_profile' 'class1' %}"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+          <h4><a href="{% url 'class_profile' 'class1' %}">Class Name</a></h4>
         </div>
         <div class="span3">
-          <a href="/classes/class1/"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
-          <h4><a href="/classes/class1/">Class Name</a></h4>
+          <a href="{% url 'class_profile' 'class1' %}"><img src="http://placekitten.com/g/200/200" alt="Featured Class Placeholder"/></a>
+          <h4><a href="{% url 'class_profile' 'class1' %}">Class Name</a></h4>
         </div>
       </div>
     </div>

@@ -35,3 +35,12 @@ class ClassSessionView(TemplateView):
         kwargs['counter'] = range(0,4)
         response = super(ClassSessionView, self).get(request, *args, **kwargs)
         return response
+
+class CreateClassView(TemplateView):
+    template_name = 'classes/create_class.html'
+
+    def get(self, request, *args, **kwargs):
+        kwargs['logged_in'] = True
+        kwargs['counter'] = range(0,4)
+        response = super(CreateClassView, self).get(request, *args, **kwargs)
+        return response
