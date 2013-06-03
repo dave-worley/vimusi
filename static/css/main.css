@@ -37,3 +37,5 @@ div.teacher.box .box-header .actions { margin: 7px 5px 0 0;}
 
 .featured-teacher { padding: 1em 0;}
 #earning-stats { height: 200px;}
+form div.form-inline { margin-bottom: 1em;}
+form div.form-inline label { margin-left: 1em;}

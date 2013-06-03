@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load ab %}
+{% block title %}Create a Class{% endblock %}
+{% block bodyid %}create-class{% endblock %}
+{% block content %}
+  <div class="page-header">
+    <h2>Create a Class</h2>
+  </div>
+  <div class="row-fluid">
+    <div class="span7 offset1">
+      <form class="form-horizontal" action="">
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="">Class Title</label>
+            <div class="controls">
+              <input class="input-xxlarge" type="text"/><span
+              class="help-block muted">A good title attracts students!</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="">Description</label>
+            <div class="controls">
+              <textarea class="input-xxlarge" name="" id="" cols="60" rows="5"></textarea>
+              <span class="help-block muted">An effective description helps draw students in, and helps explain your teaching goals.</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="">Class Starts on</label>
+            <div class="controls form-inline">
+              <input class="input-small" type="text"/>
+              <a class="btn btn-primary" href=""><i class="icon-calendar"></i></a>
+              <label for="">Finishes:</label>
+              <input class="input-small" type="text"/>
+              <a class="btn btn-primary" href=""><i class="icon-calendar"></i></a>
+            </div>
+            <div class="controls form-inline">
+              <input class="input-small" type="text"/>
+              <a class="btn btn-primary" href=""><i class="icon-calendar"></i></a>
+              <label for="">Finishes:</label>
+              <input class="input-small" type="text"/>
+              <a class="btn btn-primary" href=""><i class="icon-calendar"></i></a>
+              <a class="pull-right btn btn-small btn-warning" href=""><i class="icon-plus"></i> Add Another</a>
+            </div>
+            <div class="controls">
+              <span class="help-block muted">Add a single occurrence or add multiple instance of the same class for multiple students to sign up.</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="">Type</label>
+            <div class="controls">
+              <select name="" id="" class="input-xlarge">
+                <option value="">Single Student</option>
+                <option value="">Group Class</option>
+                <option value="">Prerecorded Class</option>
+              </select>
+              <span class="help-block muted">Choose to teach a single student, group class, or simply upload a prerecorded video.</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="">Fee</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on">$</span>
+                <input type="text" placeholder="0.00"/>
+              </div>
+              <span class="help-block muted"></span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <a class="btn btn-large btn-success pull-right" href=""><i class="icon-save"></i> Save</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+{% endblock %}
