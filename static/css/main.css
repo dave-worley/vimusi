@@ -21,7 +21,10 @@ header .navbar .nav > li > a:focus, header .navbar .nav > li > a:hover,
 div.teacher-row { margin-bottom: 1em; }
 div.teacher.thumbnail,
 div.teacher { float: left; width: 270px; margin: 0 1em 1em 0; background-color: #fff; }
-div.teacher strong { font-size: 80%; }
+div.teacher span,
+div.teacher strong,
+div.teacher a{ font-size: 70%; }
+div.teacher div.lead a { font-size: 100%}
 div.teacher div.box-content { padding: 1em 1em 0;}
 div.teacher div.actions a { color: #fff; font-size: 80%; }
 div.teacher div.lead a { color: #fff; font-size: 70%; }
