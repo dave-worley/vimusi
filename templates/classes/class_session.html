@@ -3,9 +3,6 @@
 {% block title %}
   {% ab 'Introduction to Guitar' 'Guitar for Beginners' 'Beginning Blues Guitar' 'Fingerpicking 101 with John Something' %}{% endblock %}
 {% block bodyid %}class-session{% endblock %}
-{% block extrahead %}
-  <script type="text/javascript" src="/static/js/holder/holder.js"></script>
-{% endblock %}
 {% block content %}
   <div class="row-fluid">
     <div class="span7 box">
@@ -80,4 +77,9 @@
       </div>
     </div>
   </div>
+{% endblock %}
+{% block scripts %}
+  <!-- placeholder script for placeholders -->
+  <script type="text/javascript" src="{{ STATIC_URL }}js/holder/holder.js"></script>
+  <script src="http://static.opentok.com/v1.1/js/TB.min.js" ></script>
 {% endblock %}
