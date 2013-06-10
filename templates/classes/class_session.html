@@ -25,17 +25,10 @@
       <div id="class-chatbox" class="box-content">
         <div class="thumbnail">
           <div class="inner-spacer">
-            {% for i in counter %}
               <div class="row-fluid">
-                <p class="myline span12">This is a comment I've made!</p>
-
-                <p class="theirline span12"><strong><a href="/users/username/">username</a>:</strong> This is a comment
-                  they've made!</p>
-
-                <p class="theirline span12"><strong><a href="/users/username/">username</a>:</strong> This is a comment
-                  they've made!</p>
+                <p class="myline span12"><strong><a href="/users/username/">session</a>:</strong><br/> {{ opentok_session.session_id }}</p>
+                <p class="theirline span12"><strong><a href="/users/username/">token</a>:</strong> {{ opentok_token }}</p>
               </div>
-            {% endfor %}
             <div id="class-talker">
               <form class="form-inline">
                 <div class="input-append">
