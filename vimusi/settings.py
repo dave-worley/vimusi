@@ -122,7 +122,8 @@ INSTALLED_APPS = (
     'core',
     'teachers',
     'help',
-    'lineage'
+    'lineage',
+    'class_sessions'
 )
 
 # A sample logging configuration. The only tangible logging

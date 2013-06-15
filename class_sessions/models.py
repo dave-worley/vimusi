@@ -5,9 +5,9 @@ from core.models import UserProfile
 
 class ClassSession(models.Model):
     CLASS_SESSION_TYPES = (
-        ('SINGLE', 'Freshman'),
-        ('GROUP', 'Sophomore'),
-        ('ARCHIVE', 'Junior'),
+        ('SINGLE', 'Single Student'),
+        ('GROUP', 'Group Class'),
+        ('ARCHIVE', 'Prerecorded Video'),
     )
     title = models.CharField(max_length=200)
     description = models.TextField()
