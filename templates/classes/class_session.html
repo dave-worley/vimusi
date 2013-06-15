@@ -59,9 +59,9 @@
             <div class="row-fluid">
               {% for i in counter %}
                 <div class="span3">
-                  <img src="/static/img/Free-file-icons/48px/{% ab 'doc' 'png' 'pdf' 'dmg' %}.png"/>
-
-                  <p><a href="#">filename.{% ab 'doc' 'png' 'pdf' 'dmg' %}</a></p>
+                  <!-- {% ab 'doc' 'png' 'pdf' 'dmg' 'zip' 'xls' 'jpg' 'txt' %} -->
+                  <img src="/static/img/Free-file-icons/48px/{{ choice }}.png"/>
+                  <p><a href="#">filename.{{ choice }}</a></p>
                 </div>
               {% endfor %}
             </div>
