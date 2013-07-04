@@ -3,6 +3,7 @@ from teachers.models import TeacherProfile
 from teachers.models import TeacherFile
 from core.models import UserProfile
 
+
 class ClassSession(models.Model):
     CLASS_SESSION_TYPES = (
         ('SINGLE', 'Single Student'),
@@ -13,8 +14,11 @@ class ClassSession(models.Model):
     description = models.TextField()
     session_start = models.DateTimeField()
     session_end = models.DateTimeField()
-    type = models.CharField(max_length=25, choices=CLASS_SESSION_TYPES)
+    class_type = models.CharField(max_length=25, choices=CLASS_SESSION_TYPES)
     teacher = models.ForeignKey(TeacherProfile)
     students = models.ManyToManyField(UserProfile)
-    files = models.ManyToManyField(TeacherFile)
+    files = models.ManyToManyField(TeacherFile, blank=True)
     fee = models.FloatField()
+
+    def __unicode__(self):
+        return self.title
