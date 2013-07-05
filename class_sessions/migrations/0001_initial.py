@@ -15,9 +15,10 @@ class Migration(SchemaMigration):
             ('description', self.gf('django.db.models.fields.TextField')()),
             ('session_start', self.gf('django.db.models.fields.DateTimeField')()),
             ('session_end', self.gf('django.db.models.fields.DateTimeField')()),
-            ('type', self.gf('django.db.models.fields.CharField')(max_length=25)),
+            ('class_type', self.gf('django.db.models.fields.CharField')(max_length=25)),
             ('teacher', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['teachers.TeacherProfile'])),
             ('fee', self.gf('django.db.models.fields.FloatField')()),
+            ('session_id', self.gf('django.db.models.fields.CharField')(max_length=100, blank=True)),
         ))
         db.send_create_signal(u'class_sessions', ['ClassSession'])
 
@@ -83,16 +84,17 @@ class Migration(SchemaMigration):
         },
         u'class_sessions.classsession': {
             'Meta': {'object_name': 'ClassSession'},
+            'class_type': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
             'description': ('django.db.models.fields.TextField', [], {}),
             'fee': ('django.db.models.fields.FloatField', [], {}),
-            'files': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['teachers.TeacherFile']", 'symmetrical': 'False'}),
+            'files': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['teachers.TeacherFile']", 'symmetrical': 'False', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'session_end': ('django.db.models.fields.DateTimeField', [], {}),
+            'session_id': ('django.db.models.fields.CharField', [], {'max_length': '100', 'blank': 'True'}),
             'session_start': ('django.db.models.fields.DateTimeField', [], {}),
             'students': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['core.UserProfile']", 'symmetrical': 'False'}),
             'teacher': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['teachers.TeacherProfile']"}),
-            'title': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
-            'type': ('django.db.models.fields.CharField', [], {'max_length': '25'})
+            'title': ('django.db.models.fields.CharField', [], {'max_length': '200'})
         },
         u'contenttypes.contenttype': {
             'Meta': {'ordering': "('name',)", 'unique_together': "(('app_label', 'model'),)", 'object_name': 'ContentType', 'db_table': "'django_content_type'"},

@@ -19,6 +19,7 @@ class ClassSession(models.Model):
     students = models.ManyToManyField(UserProfile)
     files = models.ManyToManyField(TeacherFile, blank=True)
     fee = models.FloatField()
+    session_id = models.CharField(max_length=100, blank=True)
 
     def __unicode__(self):
         return self.title

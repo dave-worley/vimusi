@@ -30,16 +30,15 @@ def make_user_profiles():
     return user_profiles
 
 if __name__ == '__main__':
-    # print('Making users...')
-    # users = make_users(5)
-    # print users
-    print "already created users"
 
-    print 'Making user profiles'
+    print 'Making users...'
+    users = make_users(5)
+    print users
+
+    print 'Making user profiles...'
     user_profiles = make_user_profiles()
     print user_profiles
 
-    # print 'Making teachers...'
-    # teachers = make_teachers()
-    # print teachers
-    print "already created teachers"
+    print 'Making teachers...'
+    teachers = make_teachers()
+    print teachers

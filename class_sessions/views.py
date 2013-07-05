@@ -2,6 +2,8 @@ import OpenTokSDK
 from django.views.generic import TemplateView
 from django.conf import settings
 
+from class_sessions.models import ClassSession
+
 class ClassProfileView(TemplateView):
     template_name = 'classes/class_profile.html'
 
@@ -34,6 +36,7 @@ class ClassSessionView(TemplateView):
         kwargs['counter'] = range(0,4)
         kwargs['opentok_session'] = self.make_opentok_session()
         kwargs['opentok_token'] = self.get_token_for_session(kwargs['opentok_session'], request)
+        kwargs['class_session'] = ClassSession.objects.get(id=kwargs['class_id'])
         return super(ClassSessionView, self).get(request, *args, **kwargs)
 
     def make_opentok_session(self):

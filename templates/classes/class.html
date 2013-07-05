@@ -1,15 +1,15 @@
 {% load ab %}
 <div class="span3">
   <div class="row-fluid">
-    <div class="span4"><a href="{% url 'class_profile' 'class1' %}"><img src="http://placekitten.com/g/83/83"
+    <div class="span4"><a href="{% url 'class_profile' 1 %}"><img src="http://placekitten.com/g/83/83"
                                                        alt="Featured Class Placeholder"/></a></div>
     <div class="span8">
       <h4><a
-        href="{% url 'class_profile' 'class1' %}">{% ab 'Introduction to Guitar' 'Guitar for Beginners' 'Beginning Blues Guitar' 'Fingerpicking 101 with John Something' %}</a>
+        href="{% url 'class_profile' 1 %}">{% ab 'Introduction to Guitar' 'Guitar for Beginners' 'Beginning Blues Guitar' 'Fingerpicking 101 with John Something' %}</a>
       </h4>
 
       <p>Taught by <a
-        href="{% url 'teacher_profile' 'teacher1' %}">{% ab 'teacher1' 'underscoreRex' 'bluesGuitarTeacher' 'John Fogerty' 'Jimmy Ray Vaughn' %}</a>
+        href="{% url 'teacher_profile' 'tester0' %}">tester0</a>
       </p>
     </div>
   </div>
