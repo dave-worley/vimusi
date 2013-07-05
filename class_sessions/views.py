@@ -34,9 +34,14 @@ class ClassSessionView(TemplateView):
     def get(self, request, *args, **kwargs):
         self.opentok_sdk = OpenTokSDK.OpenTokSDK(settings.OPENTOK_API_KEY, settings.OPENTOK_PRIVATE_KEY)
         kwargs['counter'] = range(0,4)
-        kwargs['opentok_session'] = self.make_opentok_session()
-        kwargs['opentok_token'] = self.get_token_for_session(kwargs['opentok_session'], request)
-        kwargs['class_session'] = ClassSession.objects.get(id=kwargs['class_id'])
+        session = ClassSession.objects.get(id=kwargs['class_id'])
+        if (session.session_id == ''):
+            active_session = self.make_opentok_session()
+            session.session_id = active_session.session_id
+            session.save()
+        kwargs['class_session'] = session
+        kwargs['opentok_token'] = self.get_token_for_session(session, request)
+        kwargs['opentok_api_key'] = settings.OPENTOK_API_KEY
         return super(ClassSessionView, self).get(request, *args, **kwargs)
 
     def make_opentok_session(self):

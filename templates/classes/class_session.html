@@ -12,9 +12,8 @@
           {{ class_session.title }}
         </div>
       </div>
-      <div class="box-content">
-        <img data-src="holder.js/670x300" alt="Video Placeholder (670x300)" style="width: 670px; height: 300px;"
-             src="holder.js/670x300/industrial">
+      <div class="box-content" id="video-session">
+        &nbsp;
       </div>
     </div>
     <div class="span5 box">
@@ -28,7 +27,7 @@
           <div class="inner-spacer">
             <div class="row-fluid">
               <p class="myline span12"><strong><a
-                href="/users/username/">session</a>:</strong><br/> {{ opentok_session.session_id }}</p>
+                href="/users/username/">session</a>:</strong><br/> {{ class_session.session_id }}</p>
 
               <p class="theirline span12"><strong><a href="/users/username/">token</a>:</strong> {{ opentok_token }}</p>
             </div>
@@ -55,8 +54,6 @@
       <div class="box-content">
         <div class="thumbnail">
           <div class="inner-spacer">
-            <p>A description of the class will go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              nisl est, vulputate at porttitor non, interdum a mauris. Phasellus imperdiet gravida pulvinar.</p>
             <h4>Class Files</h4>
 
             <div class="row-fluid">
@@ -82,6 +79,8 @@
       <div class="box-content">
         <div class="thumbnail">
           <div class="inner-spacer">
+            <p>{{ class_session.description }}</p>
+
             <p><strong>Teacher:</strong> {{ class_session.teacher.user.username }}</p>
 
             <p><strong>Students:</strong></p>
@@ -100,4 +99,82 @@
   <!-- placeholder script for placeholders -->
   <script type="text/javascript" src="{{ STATIC_URL }}js/holder/holder.js"></script>
   <script src="http://static.opentok.com/v1.1/js/TB.min.js"></script>
+  <script type="text/javascript">
+    var apiKey, sessionId, token, session, publisher, subscribers;
+
+    // TB.setLogLevel(TB.DEBUG);
+    if (TB.checkSystemRequirements() != TB.HAS_REQUIREMENTS) {
+      alert('Minimum System Requirements not met!');
+    }
+
+    subscribers = {};
+    apiKey = "{{ opentok_api_key }}"; // Replace with your API key. See https://dashboard.tokbox.com/projects
+    sessionId = "{{ class_session.session_id }}"; // Replace with your own session ID.
+    token = "{{ opentok_token }}"; // Replace with a generated token that has been assigned the moderator role.
+
+    TB.addEventListener('exception', exceptionHandler);
+
+    session = TB.initSession(sessionId);
+    session.addEventListener('sessionConnected', sessionConnectedHandler);
+    session.addEventListener('sessionDisconnected', sessionDisconnectedHandler);
+    session.addEventListener('connectionCreated', connectionCreatedHandler);
+    session.addEventListener('connectionDestroyed', connectionDestroyedHandler);
+    session.addEventListener('streamCreated', streamCreatedHandler);
+    session.addEventListener('streamDestroyed', streamDestroyedHandler);
+    session.connect(apiKey, token);
+
+
+    function exceptionHandler() {
+      alert("Exception: " + event.code + "::" + event.message);
+    }
+    {% if class_session.teacher.user == request.user or request.user.username == 'admin' %}
+      publisher = TB.initPublisher(apiKey, 'video-session', {width: 670, height: 300});
+      function sessionConnectedHandler() {
+
+        session.publish(publisher);
+        //publisher.addEventListener('settingsButtonClick', showSettings);
+      }
+    {% else %}
+      function sessionConnectedHandler(event) {
+        console.log('connected as observer');
+        console.log(event);
+        for (var i = 0; i < event.streams.length; i++) {
+          addStream(event.streams[i]);
+        }
+      }
+    {% endif %}
+    function sessionDisconnectedHandler() {
+    }
+
+    function connectionCreatedHandler(event) {
+      console.log('found a connection');
+      console.log(event);
+    }
+
+    function connectionDestroyedHandler() {
+    }
+
+    function streamCreatedHandler(event) {
+      console.log('heard streamCreated');
+      for (var i = 0; i < event.streams.length; i++) {
+        addStream(event.streams[i]);
+      }
+    }
+
+    function addStream(stream) {
+      if (stream.connection.connectionId == session.connection.connectionId) {
+        console.log('stream is publisher');
+        return;
+      }
+      var subscriberProps = {width: 670, height: 300};
+      subscribers[stream.streamId] = session.subscribe(stream, "video-session", subscriberProps);
+    }
+
+    function streamDestroyedHandler() {
+    }
+
+
+
+
+  </script>
 {% endblock %}
