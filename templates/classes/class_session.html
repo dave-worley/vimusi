@@ -123,12 +123,11 @@
     session.addEventListener('streamDestroyed', streamDestroyedHandler);
     session.connect(apiKey, token);
 
-
     function exceptionHandler() {
       alert("Exception: " + event.code + "::" + event.message);
     }
     {% if class_session.teacher.user == request.user or request.user.username == 'admin' %}
-      publisher = TB.initPublisher(apiKey, 'video-session', {width: 670, height: 300});
+      publisher = TB.initPublisher(apiKey, 'video-session', {width: 670, height: 503});
       function sessionConnectedHandler() {
 
         session.publish(publisher);
@@ -136,8 +135,6 @@
       }
     {% else %}
       function sessionConnectedHandler(event) {
-        console.log('connected as observer');
-        console.log(event);
         for (var i = 0; i < event.streams.length; i++) {
           addStream(event.streams[i]);
         }
@@ -147,15 +144,12 @@
     }
 
     function connectionCreatedHandler(event) {
-      console.log('found a connection');
-      console.log(event);
     }
 
     function connectionDestroyedHandler() {
     }
 
     function streamCreatedHandler(event) {
-      console.log('heard streamCreated');
       for (var i = 0; i < event.streams.length; i++) {
         addStream(event.streams[i]);
       }
@@ -163,18 +157,14 @@
 
     function addStream(stream) {
       if (stream.connection.connectionId == session.connection.connectionId) {
-        console.log('stream is publisher');
         return;
       }
-      var subscriberProps = {width: 670, height: 300};
+      var subscriberProps = {width: 670, height: 503};
       subscribers[stream.streamId] = session.subscribe(stream, "video-session", subscriberProps);
     }
 
     function streamDestroyedHandler() {
     }
-
-
-
 
   </script>
 {% endblock %}
