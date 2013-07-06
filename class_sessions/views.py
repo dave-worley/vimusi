@@ -42,6 +42,10 @@ class ClassSessionView(TemplateView):
         kwargs['class_session'] = session
         kwargs['opentok_token'] = self.get_token_for_session(session, request)
         kwargs['opentok_api_key'] = settings.OPENTOK_API_KEY
+
+        if request.user == session.teacher.user or request.user.is_staff:
+            self.template_name = 'classes/class_session_teacher.html'
+
         return super(ClassSessionView, self).get(request, *args, **kwargs)
 
     def make_opentok_session(self):
